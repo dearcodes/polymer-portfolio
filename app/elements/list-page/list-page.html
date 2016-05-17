@@ -1,0 +1,32 @@
+<dom-module id="list-page">
+    <template>
+        <style>
+        :host {
+            @apply(--layout-vertical);
+        }
+        </style>
+        <a href="">Backk</a>
+        <article-list limit="15" expanded></article-list>
+    </template>
+    <script>
+    (function() {
+        'use strict';
+        class ListPage {
+            // Define behaviors with a getter.
+
+            beforeRegister() {
+                this.is = 'list-page';
+                this.properties = {
+
+                };
+            }
+
+
+        }
+
+        Polymer(ListPage)
+
+
+    })();
+    </script>
+</dom-module>

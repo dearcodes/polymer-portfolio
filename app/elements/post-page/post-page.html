@@ -1,0 +1,62 @@
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+<link rel="import" href="../../styles/shared-styles.html">
+<dom-module id="post-page">
+    <template>
+        <firebase-collection data="{{singleArticle}}" limit-to-first="1" order-by-child="slug" equal-to="{{slug}}" id="singleArticle" location="https://deearcodes.firebaseio.com/articles" on-value="{{value}}"></firebase-collection>
+        <style include="shared-styles"></style>
+        <style>
+        :host {
+            display: block;
+        }
+        </style>
+        <template is="dom-repeat" items={{singleArticle}} as=article>
+            <h3>
+            {{article.title}}
+          </h3>
+            <prism-highlighter></prism-highlighter>
+            <marked-element markdown="{{article.articleContent}}">
+                <div class="markdown-html"></div>
+            </marked-element>
+        </template>
+        <a href="">Back</a>
+    </template>
+    <script>
+    Polymer({
+        is: 'post-page',
+        properties: {
+            slug: {
+                type: String,
+                reflectToAttribute: true
+            },
+            active: {
+                type: Boolean,
+                value: false,
+                reflectToAttribute: true
+            }
+        },
+        attached: function() {
+            this.importHref('../bower_components/marked-element/marked-element.html', e => {
+                let markedElement = document.createElement('marked-element');
+                markedElement.id = 'markedElementArticleWrapper'
+
+                Polymer.dom(this).appendChild(markedElement);
+            }, err => {});
+            this.importHref('../bower_components/prism-element/prism-highlighter.html', e => {}, err => {});
+        }
+    });
+    </script>
+</dom-module>

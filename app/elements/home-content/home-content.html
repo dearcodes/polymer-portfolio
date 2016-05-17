@@ -1,0 +1,107 @@
+<link rel="import" href="../../styles/shared-styles.html">
+<dom-module id="home-content">
+    <template>
+        <style include="shared-styles"></style>
+        <style>
+        :host {
+            @apply(--layout-horizontal);
+        }
+        
+        .col-1 {
+            @apply(--layout-flex-2);
+            max-width: 45%;
+            padding: 0 5% 0 2.5%;
+        }
+        
+        .col-2,
+        .col-3 {
+            @apply(--layout-flex-auto);
+            max-width: 27.5%;
+            padding: 0 2.5%;
+        }
+        
+        hr {
+            width: 3em;
+            display: block;
+            height: 2px;
+            border: 0;
+            border-top: 4px solid #FF5722;
+            margin: 2em 0;
+        }
+        
+        h3 {
+            font-size: 1.35em;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+        
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        
+        .about {
+            padding: 0 7.5% 0 0;
+        }
+        /* mobile-large */
+        
+        @media screen and (max-width: 376px) and (orientation: portrait) {
+            :host {
+                @apply(--layout-vertical);
+            }
+            .col-1 {
+                @apply(--layout-flex-2);
+                max-width: 100%;
+                padding: 0 5% 0 2.5%;
+            }
+            .col-2,
+            .col-3 {
+                @apply(--layout-flex-auto);
+                max-width: 100%;
+                padding: 0 2.5%;
+            }
+        }
+        </style>
+        <div class="col-1 home_page_content">
+            <h2>About me</h2>
+            <hr>
+            <p>
+            </p>
+        </div>
+        <div class="col-2 home_page_content">
+            <h2>Articles</h2>
+            <hr>
+            <article-list limit="15" expanded></article-list>
+            <a href="/articles">View All</a>
+        </div>
+        <div class="col-3 home_page_content">
+            <h2>Things I've built</h2>
+            <hr>
+            <h3>Test</h3>
+            <h3>Test</h3>
+            <h3>Test</h3>
+        </div>
+    </template>
+    <script>
+    (function() {
+        'use strict';
+        class HomeContent {
+            // Define behaviors with a getter.
+
+            beforeRegister() {
+                this.is = 'home-content';
+                this.properties = {
+                    route: Object
+                };
+            }
+
+            attached() {}
+
+        }
+
+        Polymer(HomeContent)
+
+    })();
+    </script>
+</dom-module>

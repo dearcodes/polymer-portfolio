@@ -1,0 +1,115 @@
+<dom-module id="admin-page">
+    <template>
+        <firebase-collection id="articlesListCollection" limit-to-first="1" location="https://deearcodes.firebaseio.com/articles" data="{{articles}}"></firebase-collection>
+        <style>
+        :host {
+            @apply(--layout-horizontal);
+        }
+        
+        div {
+            @apply(--layout-flex);
+            padding: 5em 5%;
+            margin: 0 1.5em;
+        }
+        
+        textarea {
+            width: 100%;
+            height: auto;
+        }
+        
+        marked-element::content {
+            height: 100%;
+            overflow: auto;
+        }
+        </style>
+        <template is="dom-if" if={{logged}}>
+            <div class="articleEditor">
+                <a href="">Back</a>
+                <h3>
+              
+              Create Article
+            </h3>
+                <paper-input label="Title" value="{{article.title::input}}"></paper-input>
+                <label for="content">Content</label>
+                <iron-autogrow-textarea value="{{article.articleContent::change}}">
+                    <textarea></textarea>
+                </iron-autogrow-textarea>
+                <paper-button on-tap="createArticle" raised>Crear Artículo</paper-button>
+            </div>
+            <div class="previewViewer">
+                <h3>
+                Preview
+              </h3>
+                <prism-highlighter></prism-highlighter>
+                <marked-element markdown="{{article.articleContent}}">
+                    <div class="markdown-html"></div>
+                </marked-element>
+            </div>
+        </template>
+    </template>
+    <script>
+    (function() {
+        'use strict';
+
+        class AdminPage {
+            // Define behaviors with a getter.
+            get observers() {
+                return [
+                    'slugify(article.title)'
+                ];
+            }
+            beforeRegister() {
+                this.is = 'admin-page';
+                this.properties = {
+                    logged: {
+                        type: Boolean,
+                        notify: true
+                    },
+                    article: {
+                        type: Object,
+                        notify: true,
+                        value: () => {
+                            return {
+                                title: '',
+                                slug: '',
+                                articleContent: '',
+                                date: Date.now()
+                            }
+                        }
+                    }
+
+
+                };
+            }
+            attached() {
+                this.importHref('../bower_components/marked-element/marked-element.html', e => {
+                    let markedElement = document.createElement('marked-element');
+                    markedElement.id = 'markedElementWrapper'
+                    Polymer.dom(this).appendChild(markedElement);
+                }, err => {});
+                this.importHref('../bower_components/prism-element/prism-highlighter.html', e => {}, err => {});
+            }
+            createArticle(event) {
+                this.push('articles', event.model.get('article'));
+            }
+            /**
+             * https://gist.github.com/mathewbyrne/1280286
+             * @param  {[type]} text [description]
+             * @return {[type]}      [description]
+             */
+            slugify(title) {
+              const slugifiedTitle = title.toString().toLowerCase()
+                    .replace(/\s+/g, '-') // Replace spaces with -
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+                    .replace(/^-+/, '') // Trim - from start of text
+                    .replace(/-+$/, ''); // Trim - from end of text
+              this.set('article.slug', slugifiedTitle);
+            }
+
+        }
+
+        Polymer(AdminPage);
+    })();
+    </script>
+</dom-module>

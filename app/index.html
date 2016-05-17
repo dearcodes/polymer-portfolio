@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daniel Reyes Fullstack Developer</title>
+    <!-- Place favicon.ico in the `app/` directory -->
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#FF5722">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Tile color for Win8 -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Daniel Reyes FS Dev">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Daniel Reyes FS Dev">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild-->
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <!-- Because this project uses vulcanize this should be your only html import
+       in this file. All other imports should go in elements.html -->
+    <link rel="import" href="elements/elements.html">
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved>
+    <span id="browser-sync-binding"></span>
+    <template is="dom-bind" id="app">
+        <carbon-location route="{{route}}"></carbon-location>
+        <carbon-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{tail}}"></carbon-route>
+        <carbon-route route="{{route}}" pattern="/articles/" active="{{listActive}}"></carbon-route>
+        <carbon-route route="{{route}}" pattern="/articles/:slug" active="{{postsActive}}" data="{{postsData}}"></carbon-route>
+
+         <paper-scroll-header-panel condenses keep-condensed-header header-height="128" condensed-header-height="140">
+            <main-navigation></main-navigation>
+            <div class="content">
+                <iron-pages attr-for-selected="data-route" selected="{{routeData.page}}">
+                    <section data-route="">
+                        <home-content></home-content>
+                    </section>
+                    <section data-route="articles">
+                        <template is="dom-if" if={{!postsActive}}>
+                            <list-page category="{{category}}"></list-page>
+                        </template>
+                        <template is="dom-if" if={{postsActive}}>
+                            <post-page slug="{{postsData.slug}}"></post-page>
+                        </template>
+                    </section>
+                    <section data-route="login">
+                        <login-page></login-page>
+                    </section>
+                    <section data-route="admin">
+                        <div class="adminPageParentWrapper">
+                        </div>
+                    </section>
+                </iron-pages>
+            </div>
+            <footer id="main_footer">
+                <p class="copyright">
+                    &copy; 2016 Daniel Reyes</p>
+                <div class="space"></div>
+                <nav>
+                    <a href="#">
+                        <iron-icon icon="custom-icons:facebook"></iron-icon>
+                    </a>
+                    <a href=" #">
+                        <iron-icon icon="custom-icons:github"></iron-icon>
+                    </a>
+                    <a href=" #">
+                        <iron-icon icon="custom-icons:twitter"></iron-icon>
+                    </a>
+                </nav>
+            </footer>
+        </paper-scroll-header-panel>
+        <paper-toast id="toast">
+            <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+        </paper-toast>
+        <!-- Uncomment next block to enable Service Worker support (1/2) -->
+        <!--
+    <paper-toast id="caching-complete"
+                 duration="6000"
+                 text="Caching complete! This app will work offline.">
+    </paper-toast>
+
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting
+                          base-uri="bower_components/platinum-sw/bootstrap"
+                          on-service-worker-installed="displayInstalledToast">
+      <platinum-sw-cache default-cache-strategy="fastest"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+    -->
+    </template>
+    <!-- build:js scripts/app.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild-->
+</body>
+
+</html>

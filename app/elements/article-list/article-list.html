@@ -1,0 +1,81 @@
+<link rel="import" href="../../styles/shared-styles.html">
+<dom-module id="article-list">
+    <template>
+        <firebase-collection log id="articlesListCollection" limit-to-first="{{limit}}" location="https://deearcodes.firebaseio.com/articles" data="{{articles}}"></firebase-collection>
+        <style include="shared-styles"></style>
+        <style>
+        :host {
+            @apply(--layout-vertical);
+        }
+        
+        h3 {
+            font-size: 1.35em;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+        
+        .date {
+            font-size: 0.8em;
+            margin-bottom: 2em;
+            color: #455A64;
+        }
+        
+        p {
+            margin: 0 0 .75em 0;
+        }
+        </style>
+        <template is="dom-repeat" items={{articles}} as=article>
+            <template is="dom-if" if={{small}}>
+                test
+                <h3><a href$="{{computeArticleHref(article)}}">[[article.title]]</a></h3>
+                <p class="date">
+                    [[article.date]]
+                </p>
+            </template>
+            <template is="dom-if" if={{expanded}}>
+                <h3><a href$="{{computeArticleHref(article)}}">[[article.title]]</a></h3>
+                <p class="date">
+                    [[article.date]]
+                </p>
+            </template>
+        </template>
+    </template>
+    <script>
+    (function() {
+        'use strict';
+        class ArticleList {
+            // Define behaviors with a getter.
+
+            beforeRegister() {
+                this.is = 'article-list';
+                this.properties = {
+                    small: {
+                        type: Boolean,
+                        notify: true,
+                        reflectToAttribute: true
+                    },
+                    expanded: {
+                        type: Boolean,
+                        notify: true,
+                        reflectToAttribute: true
+                    },
+                    limit: {
+                        type: Number,
+                        notify: true,
+                        reflectToAttribute: true
+                    }
+
+
+                };
+            }
+            computeArticleHref(article) {
+                return `articles/${article.slug}`
+            }
+        }
+
+        Polymer(ArticleList)
+
+    })();
+    </script>
+</dom-module>
