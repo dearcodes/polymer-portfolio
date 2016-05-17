@@ -1,3 +1,3 @@
-# deearcodes personal Web Application
+# deearcodes Personal Blog
 
 Made with Polymer
