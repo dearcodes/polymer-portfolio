@@ -13,7 +13,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <style is="custom-style" include="iron-flex iron-flex"></style>
         <style>
         :host {
-            @apply(--layout-horizontal);
+            @apply(--layout-vertical);
+            height: 256px;
         }
         
         #mainToolbar {
@@ -35,7 +36,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             border: 2px solid #E9E9E9;
             padding: 1em;
             text-decoration: none;
-            color: #455A64;
+            color: var(--primary-text-color);
         }
         
         nav {
@@ -43,8 +44,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
         
         nav a {
-            color: #455A64;
+            color: var(--primary-text-color);
             text-decoration: none;
+            font-weight: 400;
             margin: 0 1rem;
         }
         
@@ -52,15 +54,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             color: #FF5722;
         }
         </style>
-        <paper-toolbar id="mainToolbar" class="medium-tall">
-            <a href="#" class="name">Daniel Reyes</a>
-            <div class="space">
+        <paper-toolbar class="layout vertical" id="mainToolbar">
+            <div class="top flex">
+                <div class="flex layout horizontal">
+                    <a href="#" class="name">Daniel Reyes</a>
+                    <div class="space">
+                    </div>
+                    <nav>
+                        <a href="/articles">Articles</a>
+                        <a href="/projects">Projects</a>
+                        <a href="/contact">Contact</a>
+                    </nav>
+                </div>
             </div>
-            <nav>
-                <a href="/articles">Articles</a>
-                <a href="/projects">Projects</a>
-                <a href="/contact">Contact</a>
-            </nav>
         </paper-toolbar>
     </template>
     <script>

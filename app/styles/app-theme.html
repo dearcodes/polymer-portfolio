@@ -1,21 +1,20 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-styles/typography.html">
 <style is="custom-style">
-
 /* Application theme */
 
 :root {
     --primary-text-color: #212121;
     --primary-background-color: #ffffff;
-    --secondary-text-color: #737373;
+    --secondary-text-color: #727272;
     --disabled-text-color: #9b9b9b;
-    --divider-color: #dbdbdb;
-    --primary-color: #3f51b5;
-    --light-primary-color: #c5cae9;
-    --dark-primary-color: #303f9f;
-    --accent-color: #ff4081;
-    --light-accent-color: #ff80ab;
-    --dark-accent-color: #f50057;
+    --divider-color: #B6B6B6;
+    --primary-color: #607D8B;
+    --light-primary-color: #CFD8DC;
+    --dark-primary-color: #455A64;
+    --accent-color: #FF5722;
+    --light-accent-color: #FF5722;
+    --dark-accent-color: #FF5722;
     /* Components */
     /* paper-drawer-panel */
     --drawer-menu-color: #ffffff;
@@ -31,23 +30,35 @@ body {
     @apply(--layout-vertical);
 }
 
-
-paper-header-panel{
-  @apply(--layout-vertical);
-  height: 100vh;
+#headerPanelMain {
+    @apply(--layout-flex);
+    --paper-scroll-header-panel-full-header: {
+        background-position: 0% 60%;
+        background-image: url(/images/header_bg.jpg);
+    }
+    ;
+    --paper-scroll-header-container: {
+        @apply(--layout-vertical);
+    }
+    ;
+    --paper-scroll-header-panel-condensed-header: {
+        background-color: var(--dark-primary-color);
+    }
+    ;
 }
-footer{
-  @apply(--layout-flex);
+
+footer {
+    @apply(--layout-flex);
 }
 
 .space {
     @apply(--layout-flex);
 }
 
-.content{
-  @apply(--layout-flex-3);
-  width: 90%;
-  margin: 0 auto;
+.content {
+    @apply(--layout-flex-3);
+    width: 90%;
+    margin: 0 auto;
 }
 
 #drawerToolbar {
@@ -58,10 +69,6 @@ footer{
 
 #drawerToolbar .menu-name {
     @apply(--paper-font-title);
-}
-
-paper-scroll-header-panel {
-    height: 100%;
 }
 
 paper-menu {
@@ -97,22 +104,23 @@ paper-menu a {
 /*FOOTER*/
 
 footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 1.5em 5%;
-  border-top: 1px solid #E9E9E9;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 1.5em 5%;
+    border-top: 1px solid #E9E9E9;
 }
 
 footer a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 
 /*footer a svg {
   width: 20px;
@@ -120,14 +128,11 @@ footer a {
 }*/
 
 footer a svg:hover {
-  fill: #FF5722;
+    fill: #FF5722;
 }
 
 
-
-
 /* Height of the scroll area */
-
 
 section[data-route="home"] paper-material {
     @apply(--paper-font-body2);
@@ -190,7 +195,6 @@ paper-material {
         padding-right: 30px;
     }
 }
-
 
 
 /* mobile-small */

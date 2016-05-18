@@ -46,9 +46,10 @@
         <carbon-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{tail}}"></carbon-route>
         <carbon-route route="{{route}}" pattern="/articles/" active="{{listActive}}"></carbon-route>
         <carbon-route route="{{route}}" pattern="/articles/:slug" active="{{postsActive}}" data="{{postsData}}"></carbon-route>
-
-         <paper-scroll-header-panel condenses keep-condensed-header header-height="128" condensed-header-height="140">
-            <main-navigation></main-navigation>
+        <paper-scroll-header-panel id="headerPanelMain" condenses header-height="256" condensed-header-height="128">
+            <div class="paper-header">
+                <main-navigation></main-navigation>
+            </div>
             <div class="content">
                 <iron-pages attr-for-selected="data-route" selected="{{routeData.page}}">
                     <section data-route="">

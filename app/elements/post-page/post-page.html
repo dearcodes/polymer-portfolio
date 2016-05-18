@@ -22,7 +22,11 @@ Example:
         :host {
             display: block;
         }
+        pre{
+          overflow: auto;
+        }
         </style>
+        <a href="">Back</a>
         <template is="dom-repeat" items={{singleArticle}} as=article>
             <h3>
             {{article.title}}
@@ -32,7 +36,6 @@ Example:
                 <div class="markdown-html"></div>
             </marked-element>
         </template>
-        <a href="">Back</a>
     </template>
     <script>
     Polymer({
