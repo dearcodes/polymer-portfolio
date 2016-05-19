@@ -14,6 +14,8 @@ Example:
 @demo demo/index.html
 -->
 <link rel="import" href="../../styles/shared-styles.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../../bower_components/prism-element/prism-highlighter.html">
 <dom-module id="post-page">
     <template>
         <firebase-collection data="{{singleArticle}}" limit-to-first="1" order-by-child="slug" equal-to="{{slug}}" id="singleArticle" location="https://deearcodes.firebaseio.com/articles" on-value="{{value}}"></firebase-collection>
@@ -50,15 +52,6 @@ Example:
                 value: false,
                 reflectToAttribute: true
             }
-        },
-        attached: function() {
-            this.importHref('../bower_components/marked-element/marked-element.html', e => {
-                let markedElement = document.createElement('marked-element');
-                markedElement.id = 'markedElementArticleWrapper'
-
-                Polymer.dom(this).appendChild(markedElement);
-            }, err => {});
-            this.importHref('../bower_components/prism-element/prism-highlighter.html', e => {}, err => {});
         }
     });
     </script>

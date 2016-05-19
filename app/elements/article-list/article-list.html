@@ -1,7 +1,7 @@
 <link rel="import" href="../../styles/shared-styles.html">
 <dom-module id="article-list">
     <template>
-        <firebase-collection log id="articlesListCollection" limit-to-first="{{limit}}" location="https://deearcodes.firebaseio.com/articles" data="{{articles}}"></firebase-collection>
+        <firebase-collection id="articlesListCollection" limit-to-first="{{limit}}" location="https://deearcodes.firebaseio.com/articles" data="{{articles}}"></firebase-collection>
         <style include="shared-styles"></style>
         <style>
         :host {
