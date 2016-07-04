@@ -1,0 +1,8 @@
+{
+  "entrypoint": "index.html",
+  "shell": "elements/deearcodes-app/deearcodes-app.html",
+  "fragments": [
+    "elements/home-content/home-content.html",
+    "elements/main-navigation/main-navigation.html"
+  ]
+}

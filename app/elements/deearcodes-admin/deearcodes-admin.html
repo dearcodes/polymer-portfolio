@@ -1,0 +1,224 @@
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../../bower_components/prism-element/prism-highlighter.html">
+<link rel="import" href="../deearcodes-login/deearcodes-login.html">
+<link rel="import" href="../../bower_components/paper-swatch-picker/paper-swatch-picker.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html">
+<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-document.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-auth.html">
+<dom-module id="deearcodes-admin">
+    <template>
+        <firebase-query app-name="blog" id="articlesListCollection" path="/articles" data="{{articles}}"></firebase-query>
+        <firebase-document app-name="blog" path="/articles/{{existingArticleId}}" data="{{article}}"></firebase-document>        
+        <firebase-auth  id="firebaseAuth" signed-in="{{signedIn}}" user="{{user}}" app-name="blog" provider="password"></firebase-auth>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style is="custom-style" include="iron-flex iron-flex"></style>
+        <style>
+        :host {
+            @apply(--layout-horizontal);
+            --paper-tabs-selection-bar-color: var(--accent-color, #abcdef);
+        }
+        
+        div {
+            @apply(--layout-flex);
+        }
+        
+        textarea {
+            width: 100%;
+            height: auto;
+        }
+        
+        marked-element::content {
+            height: 100%;
+            overflow: auto;
+        }
+        
+        .articleMeta {
+            height: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+        form {
+            width: 70%;
+        }
+        </style>
+        <template is="dom-if" if={{!logged}}>
+        <div class="login-container">
+            <form is="iron-form" id="form" method="post">
+                <paper-input label="Email" type="email" name="email"></paper-input>
+                <paper-input type="password" label="Password" name="password"></paper-input>
+                <paper-button raised on-tap="sendForm">Inciar sesion</paper-button>
+            </form>
+        </div>
+        </template>
+        <template is="dom-if" if={{logged}}>
+            <div class="layout vertical">
+                <a href="/#/">Back</a>
+                <paper-tabs selected="{{selected}}">
+                    <paper-tab>Articles Management</paper-tab>
+                    <paper-tab>Create/Edit Article</paper-tab>
+                </paper-tabs>
+                <iron-pages selected="{{selected}}">
+                    <div>
+                        <div role="listbox">
+                            <template is="dom-repeat" items={{articles}} as=existingArticle>
+                                <paper-icon-item>
+                                    <div class="avatar blue" item-icon></div>
+                                    <paper-item-body two-line>
+                                        <div>[[existingArticle.title]]</div>
+                                        <div secondary>[[existingArticle.date]]</div>
+                                    </paper-item-body>
+                                    <paper-icon-button on-tap="editArticle" icon="icons:create" alt="favourite this!">
+                                    </paper-icon-button>
+                                </paper-icon-item>
+                            </template>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="layout horizontal">
+                            <div class="layout vertical flex">
+                                <header>
+                                    <h3>
+                            Create Article
+                        </h3>
+                                </header>
+                                <div class="flex articleMeta layout center-center horizontal">
+                                    <span>Primary Color</span>
+                                    <paper-swatch-picker color="{{article.primaryColor}}" class="fancy"></paper-swatch-picker>
+                                    <span>Secondary Color</span>
+                                    <paper-swatch-picker color="{{article.secondaryColor}}" class="fancy"></paper-swatch-picker>
+                                </div>
+                                <div class="flex-4 articleEditor">
+                                    <paper-input label="Title" value="{{article.title}}"></paper-input>
+                                    <paper-input label="Short description" value="{{article.shortDescription}}"></paper-input>
+                                    <label for="content">Content</label>
+                                    <iron-autogrow-textarea value="{{article.articleContent}}">
+                                    </iron-autogrow-textarea>
+                                    <template is="dom-if" if={{article.title}}>
+                                        <paper-button on-tap="updateArticle" raised>Edit Article</paper-button>
+                                    </template>
+                                    <template is="dom-if" if={{!article.title}}>
+                                        <paper-button on-tap="createArticle" raised>Create Article</paper-button>
+                                    </template>
+                                </div>
+                            </div>
+                            <div class="previewViewer flex">
+                                <header>
+                                    <h3>
+                                        Preview
+                                      </h3>
+                                </header>
+                                <prism-highlighter></prism-highlighter>
+                                <marked-element markdown="{{article.articleContent}}">
+                                    <div class="markdown-html"></div>
+                                </marked-element>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </iron-pages>
+        </template>
+    </template>
+    <script>
+    (function() {
+        'use strict';
+
+        class DeearcodesAdmin {
+            // Define behaviors with a getter.
+            get observers() {
+                return [
+                    'slugify(article.title)'
+                ];
+            }
+            beforeRegister() {
+                this.is = 'deearcodes-admin';
+                this.properties = {
+                    logged: {
+                        type: Boolean,
+                        notify: true,
+                        value: true
+                    },
+                    existingArticleId: {
+                        type: String,
+                        notify: true
+                    },
+                    article: {
+                        type: Object,
+                        notify: true,
+                        value: () => {
+                            return {
+                                title: '',
+                                primaryColor: '',
+                                secondaryColor: '',
+                                slug: '',
+                                articleContent: '',
+                                date: Date.now(),
+                                shortDescription: '',
+                                rawExcerpt: ''
+                            }
+                        }
+                    }
+
+
+                };
+            }
+            attached() {
+                /*this.async(() => this.$$('paper-tabs').select(0), 1000)*/
+            }
+            sendForm(event) {
+                    event.preventDefault();
+                    let data = this.$$('#form').serialize();
+                    this.$.firebaseAuth.signInWithEmailAndPassword(data.email, data.password).then(user => {
+                        this.set('logged', true);
+                    });
+                }
+                /**
+                 * Log In event from Firebase in charge of lazy loading the <admin-page> Element and setting it's logged flag
+                 * @param  {Object} event The Event
+                 * @return {[type]}       [description]
+                 */
+            
+            error(event) {
+                console.log(event.detail)
+            }
+            createArticle(event) {
+                this.push('articles', event.model.get('article'))
+            }
+            updateArticle(event) {
+                this.$.articlesListCollection.add(this.get('article'))
+            }
+            editArticle(event) {
+                    this.$$('paper-tabs').select(1);
+                    this.set('existingArticleId', event.model.get('existingArticle.$key'));
+                }
+                /**
+                 * https://gist.github.com/mathewbyrne/1280286
+                 * @param  {[type]} text [description]
+                 * @return {[type]}      [description]
+                 */
+
+            slugify(title="") {
+                const slugifiedTitle = title.toString().toLowerCase()
+                    .replace(/\s+/g, '-') // Replace spaces with -
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+                    .replace(/^-+/, '') // Trim - from start of text
+                    .replace(/-+$/, ''); // Trim - from end of text
+                this.set('article.slug', slugifiedTitle);
+            }
+
+        }
+
+        Polymer(DeearcodesAdmin);
+    })();
+    </script>
+</dom-module>

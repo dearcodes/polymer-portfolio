@@ -1,0 +1,50 @@
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+<link rel="import" href="../../bower_components/polymerfire/firebase-auth.html">
+<link rel="import" href="../deearcodes-admin/deearcodes-admin.html">
+<dom-module id="deearcodes-login">
+    <template>
+        <style>
+        :host {
+            @apply(--layout-vertical);
+            @apply(--layout-center-center);
+        }
+        
+        form {
+            width: 70%;
+        }
+        </style>
+
+        
+    </template>
+    <script>
+    class DeearcodesLogin {
+        // Define behaviors with a getter.
+
+        beforeRegister() {
+            this.is = 'deearcodes-login';
+            this.properties = {
+
+            }
+
+        }
+        
+
+    }
+
+    Polymer(DeearcodesLogin)
+    </script>
+</dom-module>

@@ -1,5 +1,6 @@
 {
   "name": "deearcodes",
+  "start_url": "index.html",
   "short_name": "deearcodes",
   "icons": [{
         "src": "images/touch/icon-72x72.png",
@@ -36,5 +37,5 @@
       }],
   "background_color": "#3E4EB8",
   "display": "standalone",
-  "theme_color": "#2E3AA1"
+  "theme_color": "#FF5722"
 }

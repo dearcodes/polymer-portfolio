@@ -1,0 +1,1898 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lis",
+				"list-active"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"ge",
+				"getMonth〔function〕"
+			],
+			[
+				"get",
+				"getDay〔function〕"
+			],
+			[
+				"parse",
+				"parseDate"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"cach",
+				"caching	(gulpfile.babel.js)"
+			],
+			[
+				"und",
+				"undefined	(firebase.js)"
+			],
+			[
+				"type",
+				"typeof	(firebase.js)"
+			],
+			[
+				"articleLis",
+				"articlesListCollection"
+			],
+			[
+				"art",
+				"articleObserver"
+			],
+			[
+				"single",
+				"singleArticleArray"
+			],
+			[
+				"ar",
+				"articleArray"
+			],
+			[
+				"obse",
+				"observer	(deearcodes-app.html)"
+			],
+			[
+				"home",
+				"home-content	(deearcodes-app.html)"
+			],
+			[
+				"main",
+				"main-navigation	(deearcodes-app.html)"
+			],
+			[
+				"deearcode",
+				"deearcodes-app	(deearcodes-app.html)"
+			],
+			[
+				"de",
+				"deearcodes-login/"
+			],
+			[
+				"pris",
+				"prism-highlighter"
+			],
+			[
+				"ma",
+				"marked-element"
+			],
+			[
+				"fi",
+				"firebase-element	(article-list.html)"
+			],
+			[
+				"deear",
+				"deearcodes-admin"
+			],
+			[
+				"base",
+				"base	Tag"
+			],
+			[
+				"dee",
+				"deearcodes-app"
+			],
+			[
+				"back",
+				"background-position: 〔property〕"
+			],
+			[
+				"prima",
+				"primary-text-color	(app-theme.html)"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"r",
+				"repeat"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"mark",
+				"marked-element"
+			],
+			[
+				"sing",
+				"singleArticle"
+			],
+			[
+				"arti",
+				"singleArticle"
+			],
+			[
+				"domr",
+				"domr	Template \"dom-repeat\""
+			],
+			[
+				"limit",
+				"limit-to-first	(article-list.html)"
+			],
+			[
+				"slu",
+				"slugifiedTitle"
+			],
+			[
+				"article",
+				"article"
+			],
+			[
+				"artci",
+				"article"
+			],
+			[
+				"fireb",
+				"firebase-collection	(article-list.html)"
+			],
+			[
+				"crea",
+				"createArticle"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"post",
+				"postContent"
+			],
+			[
+				"marke",
+				"markedElement"
+			],
+			[
+				"cre",
+				"createElement〔function〕"
+			],
+			[
+				"text",
+				"textarea	Tag"
+			],
+			[
+				"impo",
+				"importHref	(login-page.html)"
+			],
+			[
+				"admin",
+				"adminPage"
+			],
+			[
+				"log",
+				"logged	(admin-page.html)"
+			],
+			[
+				"adm",
+				"adminPage"
+			],
+			[
+				"P",
+				"Polymer"
+			],
+			[
+				"cons",
+				"const	(admin-page.html)"
+			],
+			[
+				"fire",
+				"firebaseAuth	(login-page.html)"
+			],
+			[
+				"login",
+				"login-page	(login-page.html)"
+			],
+			[
+				"dom",
+				"domi	Template \"dom-if\""
+			],
+			[
+				"curre",
+				"currentUser"
+			],
+			[
+				"current",
+				"currentUser	(login-page.html)"
+			],
+			[
+				"fir",
+				"firebaseAuth"
+			],
+			[
+				"f",
+				"for	Attr"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"iron",
+				"iron-form	iron-form"
+			],
+			[
+				"hi",
+				"hi	html import"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"car",
+				"carbon-route	carbon-route"
+			],
+			[
+				"articles",
+				"articles"
+			],
+			[
+				"iron-iconset",
+				"iron-iconset-svg	iron-iconset-svg"
+			],
+			[
+				"iron-",
+				"iron-icon	iron-icon"
+			],
+			[
+				"pad",
+				"padding: 〔property〕"
+			],
+			[
+				"s",
+				"styles/"
+			],
+			[
+				"m",
+				"mar	CSS - margin: 0;"
+			],
+			[
+				"proje",
+				"projects	(gulpfile.babel.js)"
+			],
+			[
+				"elemen",
+				"elements"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"h",
+				"h-a	height: auto;"
+			],
+			[
+				"w",
+				"w	width"
+			],
+			[
+				"flo",
+				"float	(main.scss)"
+			],
+			[
+				"wra",
+				"wrapper	(index.html)"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"af",
+				"after"
+			],
+			[
+				"clear",
+				"clearfix"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"upp",
+				"uppercase"
+			],
+			[
+				"carbon-",
+				"carbon-location	carbon-location"
+			],
+			[
+				"eleme",
+				"elements"
+			],
+			[
+				"au",
+				"aut	CSS - margin: 0 auto;"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ite",
+				"items"
+			],
+			[
+				"query",
+				"querySelectorAll	(swiper.js)"
+			],
+			[
+				"swiper",
+				"swiperContainers"
+			],
+			[
+				"attache",
+				"attached	(sc-swiper.html)"
+			],
+			[
+				"leg",
+				"length	(swiper.js)"
+			],
+			[
+				"currentT",
+				"currentTarget	(sc-swiper.html)"
+			],
+			[
+				"swiperC",
+				"swiperContainer"
+			],
+			[
+				"swiperCon",
+				"swiperContainers"
+			],
+			[
+				"fo",
+				"for	for (…) {…}"
+			],
+			[
+				"depa",
+				"department"
+			],
+			[
+				"depar",
+				"departments"
+			],
+			[
+				"img",
+				"imgSrc"
+			],
+			[
+				"paper-to",
+				"paper-toolbar	paper-toolbar"
+			],
+			[
+				"polyc",
+				"polyclass	(classPolymer.sublime-snippet)"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"c",
+				"cwup	React: componentWillUpdate(np, ns) {…}"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"se",
+				"secondary-nav-element/"
+			],
+			[
+				"hero",
+				"heroBanner"
+			],
+			[
+				"str",
+				"stringify"
+			],
+			[
+				"reso",
+				"resourcePdfSrc"
+			],
+			[
+				"bonus",
+				"bonuses"
+			],
+			[
+				"content",
+				"contentType"
+			],
+			[
+				"uploadFil",
+				"uploadFileName"
+			],
+			[
+				"scrol",
+				"scrollToTop"
+			],
+			[
+				"neon",
+				"neonAnimatedPages"
+			],
+			[
+				"bonu",
+				"bonusName"
+			],
+			[
+				"course",
+				"courseStarted"
+			],
+			[
+				"produc",
+				"productId"
+			],
+			[
+				"user",
+				"userProducts"
+			],
+			[
+				"produ",
+				"productId"
+			],
+			[
+				"prod",
+				"productId"
+			],
+			[
+				"ironAja",
+				"ironAjaxUserProduct"
+			],
+			[
+				"userProduc",
+				"userProducts	(routes.js)"
+			],
+			[
+				"ironA",
+				"ironAjaxUserProduct"
+			],
+			[
+				"findo",
+				"findOrUpdateUserProduct"
+			],
+			[
+				"toSt",
+				"toString()	String"
+			],
+			[
+				"userProdu",
+				"userProducts"
+			],
+			[
+				"userPro",
+				"userProduct"
+			],
+			[
+				"upda",
+				"updated"
+			],
+			[
+				"findOne",
+				"findOneAndUpdate	(userCourse.controller.js)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "polymer",
+		"selected_items":
+		[
+			[
+				"polymer",
+				"Snippet: polymer element"
+			],
+			[
+				"mark",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"pol",
+				"Snippet: polymer element"
+			],
+			[
+				"Snippet: ",
+				"Snippet: if...else..."
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pug",
+				"Set Syntax: Pug"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"snip for",
+				"Snippet: ES6 For Loop Iterator using Let"
+			],
+			[
+				"json",
+				"Set Syntax: JSON (Babel)"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set json",
+				"Set Syntax: JSON"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"linter",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"git ",
+				"Git: Commit history"
+			],
+			[
+				"reposi",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Repository"
+			],
+			[
+				"remp",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"be",
+				"Javascript Beautify"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"intsal",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"git che",
+				"Git: Change Branch"
+			],
+			[
+				"git",
+				"Git: Quick Commit"
+			],
+			[
+				"install ",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"Snippet: pol",
+				"Snippet: applyPolymer"
+			],
+			[
+				"gulp",
+				"Gulp"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"snippet css",
+				"Snippet: CSS - overflow: hidden;"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"codein",
+				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"emme",
+				"Emmet: Balance (outward)"
+			],
+			[
+				"pol	",
+				"Snippet: polymer element noscript"
+			],
+			[
+				"color ",
+				"Color Picker"
+			],
+			[
+				"sublime lin",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"int",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"gutter",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"choose",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"sublimelinter sett",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"packagecontr",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"package",
+				"Package Syncing: Push Settings"
+			],
+			[
+				"Package Control",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: li",
+				"Package Control: List Packages"
+			],
+			[
+				"pacl",
+				"Package Control: List Packages"
+			],
+			[
+				"gul",
+				"Gulp"
+			],
+			[
+				"gu",
+				"Gulp"
+			],
+			[
+				"git af",
+				"Git: Add Current File"
+			],
+			[
+				"conve",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"bracket",
+				"Preferences: BracketGuard Settings - Default"
+			],
+			[
+				"jshi",
+				"Build With: JSHint"
+			],
+			[
+				"gkill",
+				"Gulp: Kill running tasks"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git puu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"ajvas",
+				"Set Syntax: JavaScript 6to5"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"ftp",
+				"FTPSync: Browse"
+			],
+			[
+				"setup",
+				"FTPSync: Setup FTPSync in this folder"
+			],
+			[
+				"gis",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"defi",
+				"Package Syncing: Define Sync Folder"
+			],
+			[
+				"define",
+				"Package Syncing: Define Sync Folder"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"instalal",
+				"Package Control: Install Package"
+			],
+			[
+				"package contro",
+				"Package Control: Install Package"
+			],
+			[
+				"angular",
+				"AngularJS: Look Up Definition"
+			],
+			[
+				"dart",
+				"Set Syntax: Dart"
+			],
+			[
+				"updat",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"ang",
+				"AngularJS: Rebuild Search Index"
+			],
+			[
+				"an",
+				"AngularJS: Rebuild Search Index"
+			],
+			[
+				"angu",
+				"AngularJS: Rebuild Search Index"
+			],
+			[
+				"index",
+				"AngularJS: Rebuild Search Index"
+			],
+			[
+				"copy",
+				"File: Copy Path From Project"
+			],
+			[
+				"forma",
+				"Format: Javascript"
+			],
+			[
+				"LINT",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"Package Control: Install Package"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 510.0
+	},
+	"console":
+	{
+		"height": 849.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"a",
+			"this ",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"cd \"$env:appdata\\Sublime Text 3\\Packages\\\"",
+			"cmd",
+			"npm",
+			"help",
+			"int x",
+			" x = 0 ",
+			"var x = 0 ;",
+			"node",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dev/polymer-portfolio/dist/elements/deearcodes-admin/deearcodes-admin.html",
+		"/D/Dev/polymer-portfolio/app/index.html",
+		"/D/Dev/polymer-portfolio/app/elements/home-content/home-content.html",
+		"/D/Dev/polymer-portfolio/dist/elements/lazy-resources.html",
+		"/D/Dev/polymer-portfolio/.tmp/elements/deearcodes-app/deearcodes-app.html",
+		"/D/Dev/polymer-portfolio/.tmp/elements/article-list/article-list.html",
+		"/D/Dev/polymer-portfolio/app/elements/main-navigation/main-navigation.html",
+		"/D/Dev/polymer-portfolio/.tmp/index.html",
+		"/D/Dev/polymer-portfolio/app/polymer.json",
+		"/D/Dev/polymer-portfolio/app/cache-config.json",
+		"/D/Dev/polymer-portfolio/app/elements/list-page/list-page.html",
+		"/D/Dev/polymer-portfolio/app/elements/deearcodes-app/deearcodes-app.html",
+		"/D/Dev/polymer-portfolio/app/manifest.json",
+		"/D/Dev/polymer-portfolio/app/elements/article-list/article-list.html",
+		"/D/Dev/polymer-portfolio/app/elements/post-page/post-page.html",
+		"/D/Dev/polymer-portfolio/app/elements/lazy-resources.html",
+		"/D/Dev/polymer-portfolio/.tmp/elements/main-navigation/main-navigation.html",
+		"/D/Dev/polymer-portfolio/app/elements/deearcodes-blog/deearcodes-blog.html",
+		"/D/Dev/polymer-portfolio/app/sw-import.js",
+		"/D/Dev/polymer-portfolio/.tmp/styles/app-theme.html",
+		"/D/Dev/polymer-portfolio/app/elements/login-page/login-page.html",
+		"/C/Users/reye2/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Dev/polymer-portfolio/gulpfile.babel.js",
+		"/D/Dev/polymer-portfolio/.tmp/sw-import.js",
+		"/D/Dev/polymer-portfolio/bower.json",
+		"/D/Dev/polymer-portfolio/.tmp/index.js",
+		"/D/Dev/polymer-portfolio/app/elements/blog-pages/blog-pages.html",
+		"/D/Dev/polymer-portfolio/app/bower_components/prism-element/prism-highlighter.html",
+		"/D/Dev/polymer-portfolio/app/elements/admin-page/admin-page.html",
+		"/D/Dev/polymer-portfolio/app/elements/routing.html",
+		"/D/Dev/polymer-portfolio/README.md",
+		"/D/Dev/portfolio/gulpfile.babel.js",
+		"/D/Dev/polymer-portfolio/app/elements/elements.html",
+		"/D/Dev/polymer-portfolio/app/styles/app-theme.html",
+		"/D/Dev/polymer-portfolio/app/styles/shared-styles.html",
+		"/D/Dev/polymer-portfolio/.tmp/elements/list-page/list-page.js",
+		"/D/Dev/portfolio/app/articles.html",
+		"/D/Dev/polymer-portfolio/client/app/elements/elements.html",
+		"/D/Dev/polymer-portfolio/.tmp/elements/list-page/list-page.html",
+		"/D/Dev/polymer-portfolio/.tmp/elements/elements.html",
+		"/D/Dev/polymer-portfolio/app/elements/blog-app/blog-app.html",
+		"/D/Dev/polymer-portfolio/app/scripts/app.js",
+		"/D/Dev/polymer-portfolio/app/styles/custom-icons.html",
+		"/D/Dev/portfolio/.tmp/styles/main.css",
+		"/D/Dev/polymer-portfolio/app/styles/main.css",
+		"/D/Dev/polymer-portfolio/app/bower_components/iron-iconset-svg/iron-iconset-svg.html",
+		"/D/Dev/polymer-portfolio/app/elements/main-navigation/main-navigation.scss",
+		"/D/Dev/portfolio/app/styles/main.scss",
+		"/D/Dev/portfolio/app/styles/welcome.scss",
+		"/D/Dev/portfolio/.gitignore",
+		"/D/Dev/portfolio/app/index.html",
+		"/D/Dev/portfolio/README.md",
+		"/D/Dev/portfolio/node_modules/caniuse-db/features-json/flexbox.json",
+		"/D/Dev/portfolio/app/styles/_normalize.scss",
+		"/D/Dev/portfolio/package.json",
+		"/D/Dev/portfolio/app/styles/main.css",
+		"/D/Dev/proyect-fenix/fenix/server/views/store.pug",
+		"/C/Users/reye2/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Users/reye2/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/D/Dev/proyect-fenix/fenix/client/app/index.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/cart-element/cart-element.html",
+		"/D/Dev/proyect-fenix/fenix/.tmp/elements/secondary-nav-element/secondary-nav-element.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/account-element/account-element.html",
+		"/C/Users/reye2/AppData/Roaming/Sublime Text 3/Packages/User/classPolymer.sublime-snippet",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/location-element/location-element.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/warehouses-element/warehouses-element.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/main-header/main-header.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/primary-nav-element/primary-nav-element.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/search-bar-element/search-bar-element.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/secondary-nav-element/secondary-nav-element.html",
+		"/D/Dev/proyect-fenix/fenix/gulpfile.babel.js",
+		"/D/Dev/proyect-fenix/fenix/server/config/express.js",
+		"/D/Dev/proyect-fenix/fenix/.tmp/styles/shared-styles.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/elements/elements.html",
+		"/D/Dev/proyect-fenix/fenix/client/app/styles/app-theme.html",
+		"/D/Dev/proyect-fenix/fenix/.tmp/scripts/app.js",
+		"/D/Dev/proyect-fenix/fenix/client/app/scripts/app.js",
+		"/C/Users/reye2/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/README.md",
+		"/D/Dev/AfiliadosRicos/client/app/index.html",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-course-level/ar-course-level.html",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-bonus/ar-bonus.html",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-lms/ar-lms.html",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-course-admin/ar-course-admin.html",
+		"/D/Dev/AfiliadosRicos/client/app/elements/routing.html",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-lms-course/ar-lms-course.html",
+		"/D/Dev/AfiliadosRicos/server/config/express.js",
+		"/D/Dev/AfiliadosRicos/build/config/express.js",
+		"/D/Dev/AfiliadosRicos/server/api/bonus/bonus.model.js",
+		"/D/Dev/AfiliadosRicos/server/api/course/course.model.js",
+		"/D/Dev/AfiliadosRicos/server/api/course/course.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/bonus/bonus.controller.js",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-lms-detail/ar-lms-detail.html",
+		"/D/Dev/AfiliadosRicos/package.json",
+		"/D/Dev/AfiliadosRicos/build/api/paypal/paypal.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/paypal/paypal.controller.js",
+		"/D/Dev/AfiliadosRicos/node_modules/regenerator/CONTRIBUTING.md",
+		"/D/Dev/AfiliadosRicos/server/api/images/images.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/file/file.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/images/images.model.js",
+		"/D/Dev/AfiliadosRicos/build/api/file/file.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/file/index.js",
+		"/D/Dev/AfiliadosRicos/server/auth/facebook/passport.js",
+		"/D/Dev/AfiliadosRicos/server/api/userCourse/userCourse.controller.js",
+		"/D/Dev/AfiliadosRicos/server/iisnode.yml",
+		"/D/Dev/AfiliadosRicos/server/routes.js",
+		"/D/Dev/AfiliadosRicos/server/api/Utils.js",
+		"/D/Dev/AfiliadosRicos/server/api/user/user.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/user/user.model.js",
+		"/D/Dev/AfiliadosRicos/node_modules/caniuse-db/features-json/css-logical-props.json",
+		"/D/Dev/AfiliadosRicos/.yo-rc.json",
+		"/D/Dev/AfiliadosRicos/server/api/product/product.model.js",
+		"/D/Dev/AfiliadosRicos/server/api/userProduct/index.js",
+		"/D/Dev/AfiliadosRicos/server/api/userProduct/userProduct.model.js",
+		"/D/Dev/AfiliadosRicos/build/api/userProduct/userProduct.model.js",
+		"/D/Dev/AfiliadosRicos/server/api/userCourse/userCourse.model.js",
+		"/D/Dev/AfiliadosRicos/server/api/intercom/intercom.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/leadads/leadads.controller.js",
+		"/D/Dev/AfiliadosRicos/server/api/leadads/index.js",
+		"/D/Dev/AfiliadosRicos/server/entry.js",
+		"/D/Dev/AfiliadosRicos/server/entry.html",
+		"/D/Dev/AfiliadosRicos/server/api/webinarjam/index.js",
+		"/D/Dev/AfiliadosRicos/server/api/webinarjam/webinarjam.controller.js",
+		"/C/Users/reye2/Downloads/inscripción_webinar.csv - inscripción_webinar.csv.csv",
+		"/D/Dev/AfiliadosRicos/client/app/elements/ar-course-showcase/ar-course-showcase.html",
+		"/D/Dev/AfiliadosRicos/server/application.js",
+		"/D/Dev/AfiliadosRicos/build/entry.js",
+		"/D/Dev/AfiliadosRicos/server/config/environment/index.js",
+		"/D/Dev/AfiliadosRicos/build/routes.js"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"",
+			"E:\\Dev\\AfiliadosRicos\\client\\app\\elements",
+			"<open folders>",
+			"E:\\Dev\\AfiliadosRicos\\client\\app",
+			"E:\\",
+			"E:\\Dev\\AfiliadosRicos\\client",
+			"E:\\Dev\\AfiliadosRicos\\server",
+			"E:\\Dev\\AfiliadosRicos",
+			"E:\\Dev\\Polymer\\polymer-starter-kit-1.0.1",
+			"E:\\Dev\\test\\testreact\\react-kindling",
+			"<open folders>",
+			"E:\\Dev\\Mobile\\myApp",
+			"C:\\Dev\\proyecto-circe",
+			"C:\\Dev\\proyectocirce",
+			"C:\\Dev\\web\\nodecellar\\",
+			"C:\\Dev\\web\\nodecellar\\js",
+			"C:\\Dev\\web\\nodecellar",
+			"C:\\Dev\\web"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"for=\"\"",
+			"label",
+			"Complete",
+			"complete",
+			"caching_complete",
+			"cache-config",
+			"dist",
+			"dist($)",
+			"dist('$')",
+			"dist('elements')",
+			"'elements'",
+			"'html'",
+			"_ApplySu",
+			"_Appl",
+			"singleArticle",
+			"article",
+			"bower_components",
+			"\"../../bower",
+			"elements",
+			"copy",
+			"articles",
+			"login-page",
+			"../",
+			"collection",
+			"function",
+			"headerPanelMain",
+			"data-route",
+			"=\"/\">",
+			"`/#/",
+			"carbon",
+			"carbon-location",
+			"optimizeHtmlTask",
+			"client",
+			"copy",
+			"default",
+			"serve",
+			"browserSync",
+			"elements.html",
+			"element.html",
+			"default",
+			"__firebaseKey__",
+			"articles",
+			"__firebaseKey__",
+			"clike",
+			"python",
+			"function",
+			"logged",
+			"posts",
+			"articlesCollection",
+			"login",
+			"auth",
+			"=\"/#/\">",
+			"trans",
+			".content",
+			"toolbar",
+			"tal",
+			"#main_navigation",
+			"'>\n",
+			"drawer",
+			"'js'",
+			"js",
+			"if",
+			"sourcemaps",
+			"script",
+			"style=\"enable-background:new 0 0 90 90;\"",
+			"<p class=\"date\">\n          Friday, May 10th\n        </p>",
+			">\n",
+			";\n",
+			"app.current",
+			"app.curren",
+			"path",
+			"}\n",
+			"content",
+			"h4",
+			"div",
+			"button",
+			"span",
+			"rank",
+			"Slider",
+			"new Slider",
+			"Slider",
+			"view",
+			"swiper-button-white",
+			"swiper-button-next-",
+			"swiper-button-prev-",
+			"<sc-swiper slides-per-view=\"5\" navigation-buttons=\"true\">\n                            </sc-swiper>",
+			";\n",
+			"}\n",
+			"3004",
+			"filter",
+			"class=\"bottom\"",
+			"Bottom",
+			"bottom",
+			"title",
+			"h4",
+			"warehouse",
+			"function",
+			"optimizeHtmlTask",
+			"html",
+			"serve",
+			"files",
+			"vulcanize",
+			"task('j",
+			"task('js'",
+			"vulcanize",
+			"js",
+			"payment_status",
+			" '",
+			"web.1",
+			"req.body",
+			"\n        ",
+			"unireq",
+			"\\$body",
+			"/$body",
+			"$body",
+			"fab",
+			"heroBanner",
+			"http",
+			"_computeBonusVideoSrc",
+			"az",
+			"az802327",
+			"youtube",
+			"body",
+			"application/json",
+			"bonusVideoName",
+			"bonusVideoId",
+			"_addBonus",
+			"_addBonusVideo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"/images/touch/",
+			"/images/touch",
+			"css",
+			"",
+			"/dist/public/stylesheets/",
+			"/dist/public/scripts/",
+			"/dist/scripts/",
+			"/dist/stylesheets/",
+			"<script src=\"../",
+			"<link href=\"../",
+			"<img src=\"../"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 168.0
+	},
+	"pinned_build_system": "Packages/User/Chrome.sublime-build",
+	"project": "portfolio.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"deeearcode-",
+				"polymer-portfolio\\dist\\elements\\deearcodes-admin\\deearcodes-admin.html"
+			],
+			[
+				"deear",
+				"polymer-portfolio\\app\\elements\\deearcodes-app\\deearcodes-app.html"
+			],
+			[
+				"index",
+				"polymer-portfolio\\app\\index.html"
+			],
+			[
+				"main-",
+				"polymer-portfolio\\.tmp\\elements\\main-navigation\\main-navigation.html"
+			],
+			[
+				"lazy",
+				"polymer-portfolio\\app\\elements\\lazy-resources.html"
+			],
+			[
+				"home-content",
+				"polymer-portfolio\\app\\elements\\home-content\\home-content.html"
+			],
+			[
+				"gulpfile",
+				"portfolio\\gulpfile.babel.js"
+			],
+			[
+				"post-",
+				"polymer-portfolio\\app\\elements\\post-page\\post-page.html"
+			],
+			[
+				"list-page.h",
+				"polymer-portfolio\\app\\elements\\list-page\\list-page.html"
+			],
+			[
+				"list-pa",
+				"polymer-portfolio\\.tmp\\elements\\list-page\\list-page.js"
+			],
+			[
+				"main",
+				"polymer-portfolio\\app\\elements\\main-navigation\\main-navigation.html"
+			],
+			[
+				"post",
+				"polymer-portfolio\\app\\elements\\post-page\\post-page.html"
+			],
+			[
+				"shared",
+				"polymer-portfolio\\app\\styles\\shared-styles.html"
+			],
+			[
+				"home-c",
+				"polymer-portfolio\\app\\elements\\home-content\\home-content.html"
+			],
+			[
+				"app-",
+				"polymer-portfolio\\app\\styles\\app-theme.html"
+			],
+			[
+				"elemen",
+				"polymer-portfolio\\app\\elements\\elements.html"
+			],
+			[
+				"adimn",
+				"polymer-portfolio\\app\\elements\\admin-page\\admin-page.html"
+			],
+			[
+				"article",
+				"portfolio\\app\\articles.html"
+			],
+			[
+				"elements",
+				"polymer-portfolio\\app\\elements\\elements.html"
+			],
+			[
+				"iron-iconse",
+				"polymer-portfolio\\app\\bower_components\\iron-iconset-svg\\iron-iconset-svg.html"
+			],
+			[
+				"gulpfi",
+				"polymer-portfolio\\gulpfile.babel.js"
+			],
+			[
+				"flex",
+				"node_modules\\caniuse-db\\features-json\\flexbox.json"
+			],
+			[
+				"swiper.",
+				"client\\app\\bower_components\\swiper\\dist\\js\\swiper.js"
+			],
+			[
+				"sw-swi",
+				"client\\app\\bower_components\\sc-swiper\\sc-swiper.html"
+			],
+			[
+				"seconda",
+				".tmp\\elements\\secondary-nav-element\\secondary-nav-element.html"
+			],
+			[
+				"prima",
+				"client\\app\\elements\\primary-nav-element\\primary-nav-element.html"
+			],
+			[
+				"express",
+				"server\\config\\express.js"
+			],
+			[
+				"paypal",
+				"server\\api\\paypal\\paypal.controller.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"rou",
+				"client\\app\\elements\\routing.html"
+			],
+			[
+				"rountin",
+				"node_modules\\regenerator\\CONTRIBUTING.md"
+			],
+			[
+				"index.",
+				"client\\app\\index.html"
+			],
+			[
+				"ar-cour",
+				"client\\app\\elements\\ar-lms-course\\ar-lms-course.html"
+			],
+			[
+				"ar-show",
+				"client\\app\\elements\\ar-course-showcase\\ar-course-showcase.html"
+			],
+			[
+				"index.html",
+				"client\\app\\index.html"
+			],
+			[
+				"element",
+				"client\\app\\elements\\elements.html"
+			],
+			[
+				"course-level",
+				"D:\\Dev\\AfiliadosRicos\\client\\app\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"pdf-",
+				"client\\app\\bower_components\\pdf-object\\pdf-object.html"
+			],
+			[
+				"paper-dra",
+				"client\\app\\bower_components\\paper-drawer-panel\\paper-drawer-panel.html"
+			],
+			[
+				"course-le",
+				"client\\app\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"inde",
+				"client\\app\\index.html"
+			],
+			[
+				"opaq",
+				"client\\app\\bower_components\\neon-animation\\animations\\opaque-animation.html"
+			],
+			[
+				"paper-dr",
+				"client\\app\\bower_components\\paper-drawer-panel\\paper-drawer-panel.html"
+			],
+			[
+				"paper-he",
+				"client\\app\\bower_components\\paper-header-panel\\paper-header-panel.html"
+			],
+			[
+				"course-l",
+				"client\\app\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"opaque",
+				"client\\app\\bower_components\\neon-animation\\animations\\opaque-animation.html"
+			],
+			[
+				"ar-cou",
+				"client\\app\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"routin",
+				"client\\app\\elements\\routing.html"
+			],
+			[
+				"app.",
+				"client\\app\\scripts\\app.js"
+			],
+			[
+				"course-ad",
+				"client\\app\\elements\\ar-course-admin\\ar-course-admin.html"
+			],
+			[
+				"file.co",
+				"server\\api\\file\\file.controller.js"
+			],
+			[
+				"eleme",
+				"client\\app\\elements\\elements.html"
+			],
+			[
+				"suble",
+				"build\\api\\sublevel\\sublevel.model.js"
+			],
+			[
+				"ar-lms",
+				"client\\app\\elements\\ar-lms\\ar-lms.html"
+			],
+			[
+				"sublevel.mo",
+				"build\\api\\sublevel\\sublevel.model.js"
+			],
+			[
+				"course.model",
+				"server\\api\\course\\course.model.js"
+			],
+			[
+				"app.js",
+				"client\\app\\scripts\\app.js"
+			],
+			[
+				"app.j",
+				"client\\app\\scripts\\app.js"
+			],
+			[
+				"log",
+				"client\\app\\login.html"
+			],
+			[
+				"login-",
+				"node_modules\\caniuse-db\\features-json\\css-logical-props.json"
+			],
+			[
+				"course-",
+				"client\\app\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"login.html",
+				"client\\app\\login.html"
+			],
+			[
+				"courseleve",
+				"client\\app\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"login",
+				"client\\app\\login.html"
+			],
+			[
+				"entry",
+				"server\\entry.js"
+			],
+			[
+				"rese",
+				"client\\app\\reset.html"
+			],
+			[
+				"indec",
+				"node_modules\\coa\\src\\index.coffee"
+			],
+			[
+				"reset.",
+				"client\\app\\reset.html"
+			],
+			[
+				"course",
+				"server\\api\\course\\course.controller.js"
+			],
+			[
+				"auth",
+				"server\\auth\\auth.service.js"
+			],
+			[
+				"login.",
+				"client\\app\\login.html"
+			],
+			[
+				"paper-tool",
+				"client\\app\\bower_components\\paper-toolbar\\paper-toolbar.html"
+			],
+			[
+				"entr",
+				"server\\entry.js"
+			],
+			[
+				"expres",
+				"server\\config\\express.js"
+			],
+			[
+				"find",
+				"Find Results"
+			],
+			[
+				"expre",
+				"server\\config\\express.js"
+			],
+			[
+				"gulp",
+				"gulpfile.babel.js"
+			],
+			[
+				"gulpf",
+				"gulpfile.js"
+			],
+			[
+				"ggulp",
+				"node_modules\\gulp-cssmin\\gulpfile.js"
+			],
+			[
+				"inde.",
+				"dist\\index.html"
+			],
+			[
+				"index.j",
+				"build\\auth\\index.js"
+			],
+			[
+				"gu",
+				"gulpfile.js"
+			],
+			[
+				"usercourse.",
+				"build\\api\\userCourse\\userCourse.controller.js"
+			],
+			[
+				"ar-course",
+				"client\\app\\public\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"ar-couread",
+				"client\\app\\public\\elements\\ar-course-admin\\ar-course-admin.html"
+			],
+			[
+				"ar-ad",
+				"client\\app\\public\\elements\\ar-course-admin\\ar-course-admin.html"
+			],
+			[
+				"lms",
+				"client\\app\\public\\elements\\ar-lms-course\\ar-lms-course.html"
+			],
+			[
+				"tas",
+				"server\\api\\task\\task.model.js"
+			],
+			[
+				"task.m",
+				"server\\api\\task\\task.model.js"
+			],
+			[
+				"elem",
+				"client\\app\\public\\elements\\elements.html"
+			],
+			[
+				"ar-leve",
+				"client\\app\\public\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"userco",
+				"server\\api\\userCourse\\userCourse.controller.js"
+			],
+			[
+				"ar-course-l",
+				"client\\app\\public\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"ar-lo",
+				"client\\app\\public\\elements\\ar-login\\ar-login.html"
+			],
+			[
+				"usercontroller",
+				"server\\api\\userCourse\\userCourse.controller.js"
+			],
+			[
+				"ar-logi",
+				"client\\app\\public\\elements\\ar-login\\ar-login.html"
+			],
+			[
+				"ar-courle",
+				"client\\app\\public\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"ar-l",
+				"client\\app\\public\\elements\\ar-login\\ar-login.html"
+			],
+			[
+				"passpor",
+				"server\\auth\\facebook\\passport.js"
+			],
+			[
+				"passpo",
+				"build\\auth\\twitter\\passport.js"
+			],
+			[
+				"ar-da",
+				"client\\app\\public\\elements\\ar-dashboard\\ar-dashboard.html"
+			],
+			[
+				"app",
+				"client\\app\\public\\scripts\\app.js"
+			],
+			[
+				"dash",
+				"client\\app\\public\\elements\\ar-dashboard\\ar-dashboard.html"
+			],
+			[
+				"admin",
+				"client\\app\\public\\elements\\ar-course-admin\\ar-course-admin.html"
+			],
+			[
+				"course.mode",
+				"server\\api\\course\\course.model.js"
+			],
+			[
+				"acc",
+				"client\\app\\public\\elements\\account-component\\account-component.html"
+			],
+			[
+				"prof",
+				"client\\app\\public\\elements\\ar-user-profile\\ar-user-profile.html"
+			],
+			[
+				"",
+				"server\\api\\user\\user.controller.js"
+			],
+			[
+				"contro",
+				"server\\api\\user\\user.controller.js"
+			],
+			[
+				"user.mo",
+				"server\\api\\user\\user.model.js"
+			],
+			[
+				"profile",
+				"client\\app\\public\\elements\\ar-user-profile\\ar-user-profile.html"
+			],
+			[
+				"model.",
+				"server\\api\\user\\user.model.js"
+			],
+			[
+				"user.contr",
+				"server\\api\\user\\user.controller.js"
+			],
+			[
+				"user.con",
+				"server\\api\\user\\user.controller.js"
+			],
+			[
+				"accou",
+				"client\\app\\public\\elements\\account-component\\account-component.html"
+			],
+			[
+				"user.mode",
+				"server\\api\\user\\user.model.js"
+			],
+			[
+				"routinh",
+				"client\\app\\public\\elements\\routing.html"
+			],
+			[
+				"ar-user",
+				"client\\app\\public\\elements\\ar-user-profile\\ar-user-profile.html"
+			],
+			[
+				"ar-b",
+				"client\\app\\public\\elements\\ar-badge\\ar-badge.html"
+			],
+			[
+				"coursele",
+				"client\\app\\public\\elements\\ar-course-level\\ar-course-level.html"
+			],
+			[
+				"icon",
+				"client\\bower_components\\iron-icons\\av-icons.html"
+			],
+			[
+				"app-t",
+				"client\\app\\public\\styles\\app-theme.html"
+			],
+			[
+				"ar-log",
+				"client\\app\\elements\\ar-login\\ar-login.html"
+			],
+			[
+				"index.ht",
+				"client\\app\\index.html"
+			],
+			[
+				"builduser",
+				"build\\api\\user\\user.controller.js"
+			],
+			[
+				"apiuser.cont",
+				"server\\api\\user\\user.controller.js"
+			],
+			[
+				"userindex.js",
+				"server\\api\\user\\index.js"
+			],
+			[
+				"user.contro",
+				"server\\api\\user\\user.controller.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Dev\\fenix.sublime-project"
+			],
+			[
+				"reac",
+				"E:\\Dev\\testreact.sublime-project"
+			]
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

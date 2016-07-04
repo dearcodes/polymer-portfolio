@@ -60,7 +60,7 @@ var styleTask = function(stylesPath, srcs) {
 
 // Transpile all JS to ES5.
 gulp.task('js', function () {
- return gulp.src(['app/**/*.{js,html}', '!app/bower_components/**/*'])
+ return gulp.src(['app/**/*.{js,html}', '!app/bower_components/**/*', '!app/index.html'])
    .pipe($.if('*.html', $.crisper({scriptInHead:false}))) // Extract JS from .html files
    .pipe($.sourcemaps.init())
    .pipe($.if('*.js', $.babel({
@@ -68,7 +68,7 @@ gulp.task('js', function () {
    })))
    .pipe($.sourcemaps.write())
    .pipe(gulp.dest('.tmp/'))
-   .pipe(gulp.dest('dist/client/'));
+   .pipe(gulp.dest('dist/'));
 });
 
 var imageOptimizeTask = function(src, dest) {
@@ -143,7 +143,8 @@ gulp.task('copy', function() {
     '!app/elements',
     '!app/bower_components',
     '!app/cache-config.json',
-    '!**/.DS_Store'
+    '!**/.DS_Store',
+    '!client/*'
   ], {
     dot: true
   }).pipe(gulp.dest(dist()));
@@ -151,7 +152,7 @@ gulp.task('copy', function() {
   // Copy over only the bower_components we need
   // These are things which cannot be vulcanized
   var bower = gulp.src([
-    'app/bower_components/{webcomponentsjs,platinum-sw,sw-toolbox,promise-polyfill}/**/*'
+    'app/bower_components//**/**'
   ]).pipe(gulp.dest(dist('bower_components')));
 
   return merge(app, bower)
@@ -205,6 +206,9 @@ gulp.task('cache-config', function(callback) {
   glob([
     'index.html',
     './',
+    'bower_components/paper-styles/typography.html',
+    'bower_components/polymer/polymer.html',
+    'bower_components/firebase-element/firebase-collection.html',
     'bower_components/webcomponentsjs/webcomponents-lite.min.js',
     '{elements,scripts,styles}/**/*.*'],
     {cwd: dir}, function(error, files) {
@@ -289,8 +293,8 @@ gulp.task('default', ['clean'], function(cb) {
   runSequence(
     ['ensureFiles', 'copy', 'styles'],
     'elements',
-    ['images', 'fonts', 'html', 'js'],
-    'vulcanize', // 'cache-config',
+    ['images', 'fonts', 'html', 'js']/*,
+    'vulcanize'*/, 'cache-config',
     cb);
 });
 

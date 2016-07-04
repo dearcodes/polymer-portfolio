@@ -1,11 +1,14 @@
 <link rel="import" href="../../styles/shared-styles.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
+<!-- <link rel="import" href="../../bower_components/firebase-element/firebase-collection.html"> -->
 <dom-module id="article-list">
     <template>
-        <firebase-collection id="articlesListCollection" limit-to-first="{{limit}}" location="https://deearcodes.firebaseio.com/articles" data="{{articles}}"></firebase-collection>
+        <firebase-query app-name="blog" limit-to-first=[[limit]] id="articlesListCollection" path="/articles" data="{{articles}}"></firebase-query>
         <style include="shared-styles"></style>
         <style>
         :host {
             @apply(--layout-vertical);
+            margin: 1rem 0;
         }
         
         h3 {
@@ -25,19 +28,21 @@
             margin: 0 0 .75em 0;
         }
         </style>
-        <template is="dom-repeat" items={{articles}} as=article>
-            <template is="dom-if" if={{small}}>
-                test
-                <h3><a href$="{{computeArticleHref(article)}}">[[article.title]]</a></h3>
+        <template is="dom-repeat" items=[[articles]] as=article>
+            <template is="dom-if" if=[[small]]>
+                <h3><a href$="[[computeArticleHref('/#/blog/',article.slug)]]">[[article.title]]</a></h3>
                 <p class="date">
-                    [[article.date]]
+                    [[parseDate(article.date)]]
                 </p>
             </template>
-            <template is="dom-if" if={{expanded}}>
-                <h3><a href$="{{computeArticleHref(article)}}">[[article.title]]</a></h3>
+            <template is="dom-if" if=[[expanded]]>
+                <h3><a href$="[[computeArticleHref('/#/blog/',article.slug)]]">[[article.title]]</a></h3>
                 <p class="date">
-                    [[article.date]]
+                  <sc-timeago datetime="[[parseDate(article.date)]]"></sc-timeago>
                 </p>
+                <a href$="[[computeArticleHref('/#/blog/',article.slug)]]" class="excerpt">
+                    [[trimArticleContent(article.articleContent)]]                    
+                </a>
             </template>
         </template>
     </template>
@@ -69,12 +74,27 @@
 
                 };
             }
-            computeArticleHref(article) {
-                return `articles/${article.slug}`
+            computeArticleHref(_staticHref, _slug) {
+                return `${_staticHref}${_slug}`
             }
+            
+            /**
+             * TODO: This needs to be abstracted to a utilities class (Behaviour?)
+             * @param  {Date} _date The date to be parsed
+             * @return {String}       parsedDate
+             */
+            parseDate(_date){
+                let date = new Date(_date)
+                return date.toISOString()
+            }
+
+            trimArticleContent(shortDescription){
+                return `${shortDescription.trim(150)}...` 
+            }
+
         }
 
-        Polymer(ArticleList)
+        Polymer(ArticleList);
 
     })();
     </script>

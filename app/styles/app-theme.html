@@ -30,36 +30,27 @@ body {
     @apply(--layout-vertical);
 }
 
-#headerPanelMain {
-    @apply(--layout-flex);
-    --paper-scroll-header-panel-full-header: {
-        background-position: 0% 60%;
-        background-image: url(/images/header_bg.jpg);
-    }
-    ;
-    --paper-scroll-header-container: {
-        @apply(--layout-vertical);
-    }
-    ;
-    --paper-scroll-header-panel-condensed-header: {
-        background-color: var(--dark-primary-color);
-    }
-    ;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-footer {
-    @apply(--layout-flex);
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
 }
 
-.space {
-    @apply(--layout-flex);
+.clearfix:after {
+    clear: both;
 }
 
-.content {
-    @apply(--layout-flex-3);
-    width: 90%;
-    margin: 0 auto;
-}
+
+
+
 
 #drawerToolbar {
     color: var(--secondary-text-color);
@@ -129,17 +120,6 @@ footer a {
 
 footer a svg:hover {
     fill: #FF5722;
-}
-
-
-/* Height of the scroll area */
-
-section[data-route="home"] paper-material {
-    @apply(--paper-font-body2);
-}
-
-section[data-route="home"] paper-material .subhead {
-    @apply(--paper-font-subhead);
 }
 
 paper-material {

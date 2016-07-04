@@ -8,40 +8,32 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<dom-module id="blog-app">
-  <template>
+<link rel="import" href="..\..\..\..\app\bower_components/polymer/polymer.html">
 
+<dom-module id="deearcodes-cv">
+  <template>
     <style>
       :host {
         display: block;
       }
     </style>
-    <main>
-      <blog-pages route={{route}}>
-        
-      </blog-pages>
-    </main>
+    <div>Hello from <span>{{foo}}</span></div>
   </template>
   <script>
   (function() {
     'use strict';
-    class BlogApp {
-      // Define behaviors with a getter.
-      
-      beforeRegister() {
-        this.is =  'blog-app';
-        this.properties =  {
-          route: Object
-        };
+
+    Polymer({
+      is: 'deearcodes-cv',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'deearcodes-cv',
+          notify: true
+        }
       }
-      attached(){
-        console.log()
-      }
-      
-      }
-    
-    Polymer(BlogApp);
-    
+    });
   })();
   </script>
 </dom-module>
