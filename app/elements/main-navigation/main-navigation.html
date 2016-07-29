@@ -7,94 +7,106 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
 <dom-module id="main-navigation">
-    <template>
-        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-        <style is="custom-style" include="iron-flex iron-flex"></style>
-        <style>
-        :host {
-            @apply(--layout-vertical);
-            height: 240px;
-        }
-        
-        #mainToolbar {
-            @apply(--layout-flex);
-            --paper-toolbar-background: transparent;
-            padding: 2.5em 5%;
-            border-bottom: 1px solid #E9E9E9;
-        }
-        
-        
-        
-        .space {
-            @apply(--layout-flex);
-        }
-        
-        .name {
-            font-weight: 700;
-            font-size: .8em;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            border: 2px solid #E9E9E9;
-            padding: 1em;
-            text-decoration: none;
-            color: var(--primary-text-color);
-        }
-        
-        nav {
-            padding-top: 1.5rem;
-        }
-        
-        nav a {
-            color: var(--primary-text-color);
-            text-decoration: none;
-            font-weight: 400;
-            margin: 0 1rem;
-        }
-        
-        nav a:hover {
-            color: #FF5722;
-        }
+  <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style is="custom-style" include="iron-flex iron-flex"></style>
+    <style include="shared-styles">
+    :host {
+      @apply(--layout-vertical);
+      height: 240px;
+    }
+    
+    #mainHeader {
+      background-position: 0% 30%;
+      background-image: url(/images/header_bg.jpg);
+      height: 100%;
+      @apply(--layout-vertical);
+    }
+    
+    #mainToolbar {
+      @apply(--layout-flex);
+      padding: 2.5em 5%;
+      height: 100%;
+      box-sizing: border-box;
+    }
 
-        @media (max-width: 600px) {
+    #headerContainer {
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .space {
+      @apply(--layout-flex);
+    }
+    
+    .name {
+      font-weight: 700;
+      font-size: .8em;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      border: 2px solid #E9E9E9;
+      padding: 1em;
+      text-decoration: none;
+      color: var(--primary-text-color);
+    }
+    
+    nav {
+      padding-top: 1.5rem;
+    }
+    
+    nav a {
+      color: var(--primary-text-color);
+      text-decoration: none;
+      font-weight: 400;
+      margin: 0 1rem;
+    }
 
-        }
-        /* Tablet+ */
-        
-        @media (min-width: 601px) {
-            #headerContainer {
-                @apply(--layout-horizontal);
-            }
-        }
-        </style>
-        <paper-toolbar class="layout medium-tall vertical" id="mainToolbar">
-            <div class="top flex">
-                <div id="headerContainer" class=" flex layout vertical center-center">
-                    <a href="#/home" class="name">Daniel Reyes</a>
-                    <div class="space">
-                    </div>
-                    <nav>
-                        <a href="#/blog">Blog</a>
-                        <a href="#/about">About</a>
-                        <a href="#/contact">Contact</a>
-                    </nav>
-                </div>
-            </div>
-        </paper-toolbar>
-    </template>
-    <script>
-    (function() {
-        'use strict';
-        class MainNavigation {
-            // Define behaviors with a getter.
 
-            beforeRegister() {
-                this.is = 'main-navigation';
-                this.properties = {};
-            }
-        }
+    
+    nav a:hover {
+      color: #FF5722;
+    }
+    
+    @media (max-width: 600px) {}
+    /* Tablet+ */
+    
+    @media (min-width: 601px) {
+      #headerContainer {
+        @apply(--layout-horizontal);
+      }
+    }
+    </style>
+    <app-header header id="mainHeader" condenses reveals>
+      <app-toolbar class="layout vertical" id="mainToolbar">
+        <div id="headerContainer" class=" flex layout vertical center-center">
+          <a href="#/home" class="name" main-title>Daniel Reyes</a>
+          <div class="space">
+          </div>
+          <nav>
+            <a href="#/blog">Blog</a>
+            <a href="#/about">About</a>
+            <a href="#/contact">Contact</a>
+          </nav>
+        </div>
+      </app-toolbar>
+    </app-header>
+  </template>
+  <script>
+  (function() {
+    'use strict';
+    class MainNavigation {
+      // Define behaviors with a getter.
 
-        Polymer(MainNavigation);
-    })();
-    </script>
+      beforeRegister() {
+        this.is = 'main-navigation';
+        this.properties = {};
+      }
+    }
+
+    Polymer(MainNavigation);
+  })();
+  </script>
 </dom-module>

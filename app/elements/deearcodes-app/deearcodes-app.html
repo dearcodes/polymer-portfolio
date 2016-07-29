@@ -1,260 +1,214 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../styles/app-theme.html">
-<link rel="import" href="../../bower_components/iron-iconset-svg/iron-iconset-svg.html">
-<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
-<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
-<link rel="import" href="../../bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
-<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
 <link rel="import" href="../../bower_components/app-route/app-location.html">
 <link rel="import" href="../../bower_components/app-route/app-route.html">
-<link rel="import" href="../main-navigation/main-navigation.html">
-<link rel="import" href="../home-content/home-content.html">
-<link rel="import" href="../../styles/custom-icons.html">
-<link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
+
 <dom-module id="deearcodes-app">
-    <template>
-        <style>
-        :host {
-            @apply(--layout-vertical);
-            @apply(--layout-flex);
-            position: relative;
-            --primary-text-color: #212121;
-            --primary-background-color: #ffffff;
-            --secondary-text-color: #727272;
-            --disabled-text-color: #9b9b9b;
-            --divider-color: #B6B6B6;
-            --primary-color: #607D8B;
-            --light-primary-color: #CFD8DC;
-            --dark-primary-color: #455A64;
-            --accent-color: #FF5722;
-            --light-accent-color: #FF5722;
-            --dark-accent-color: #FF5722;
-            /* Components */
-            /* paper-drawer-panel */
-            --drawer-menu-color: #ffffff;
-            --drawer-border-color: 1px solid #ccc;
-            --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
-            /* paper-menu */
-            --paper-menu-background-color: #fff;
-            --menu-link-color: #111111;
-        }
-        
-        #headerPanelMain {
-            @apply(--layout-flex);
-            @apply(--layout-vertical);
-            --paper-scroll-header-panel-full-header: {
-                background-position: 0% 30%;
-                background-image: url(/images/header_bg.jpg);
-            }
-            ;
-            --paper-scroll-header-container: {
-                @apply(--layout-vertical);
-            }
-            ;
-            --paper-scroll-header-panel-condensed-header: {
-                background-color: var(--dark-primary-color);
-            }
-            ;
-        }
-        
-        .content {
-            @apply(--layout-flex-3);
-            width: 90%;
-            margin: 0 auto;
-        }
-        
-        section {
-            padding: 2.5em 5%;
-        }
-        
-        .space {
-            @apply(--layout-flex);
-        }
-        
-        footer {
-            @apply(--layout-horizontal);
-            @apply(--layout-flex);
-        }
-        
-        footer {
-            padding: 1.5em 5%;
-            border-top: 1px solid #E9E9E9;
-            min-height: 5rem;
-        }
-        
-        footer a {
-            text-decoration: none;
-        }
-        
-        footer a {
-            color: var(--primary-text-color, #212121);
-        }
-        
-        footer a:hover {
-            color: var(--accent-color, #FF5722);
-        }
-        </style>
-        <!--
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+    :host {
+      @apply(--layout-vertical);
+      @apply(--layout-flex);
+      --primary-text-color: #212121;
+      --primary-background-color: #ffffff;
+      --secondary-text-color: #727272;
+      --disabled-text-color: #9b9b9b;
+      --divider-color: #B6B6B6;
+      --primary-color: #607D8B;
+      --light-primary-color: #CFD8DC;
+      --dark-primary-color: #455A64;
+      --accent-color: #FF5722;
+      --light-accent-color: #FF5722;
+      --dark-accent-color: #FF5722;
+      /* Components */
+      /* paper-drawer-panel */
+      --drawer-menu-color: #ffffff;
+      --drawer-border-color: 1px solid #ccc;
+      --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+      /* paper-menu */
+      --paper-menu-background-color: #fff;
+      --menu-link-color: #111111;
+    }
+    
+    #headerPanelMain {
+      @apply(--layout-flex);
+      @apply(--layout-vertical);
+    }
+    .space {
+      @apply(--layout-flex);
+    }
+    
+    .content {
+      @apply(--layout-flex);
+    }
+    
+    section {
+      padding: 2.5em 5%;
+    }
+    
+    footer {
+      @apply(--layout-horizontal);
+      z-index: 0;
+    }
+    
+    footer {
+      padding: 1.5em 5%;
+      border-top: 1px solid #E9E9E9;
+      min-height: 3rem;
+    }
+    
+    footer a {
+      text-decoration: none;
+    }
+    
+    footer a {
+      color: var(--primary-text-color, #212121);
+    }
+    
+    footer a:hover {
+      color: var(--accent-color, #FF5722);
+    }
+    </style>
+    <!--
       app-location and app-route elements provide the state of the URL for the app. -->
-        <app-location route="{{route}}" use-hash-as-path></app-location>
-        <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{tail}}"></app-route>
-        <app-route route="{{route}}" pattern="/blog/:slug" active="{{postsActive}}" data="{{postsData}}"></app-route>
-        <firebase-app name="blog" api-key="AIzaSyBpUQyoTv2SdNNKbEy9xrp00F-LTIeC8eU" auth-domain="deearcodes.firebaseapp.com" database-url="https://deearcodes.firebaseio.com">
-        </firebase-app>
-        <paper-scroll-header-panel id="headerPanelMain" condenses header-height="240" condensed-header-height="64">
-            <div class="paper-header">
-                <main-navigation></main-navigation>
-            </div>
-            <div class="content">
-                <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible">
-                    <section name="home">
-                        <home-content></home-content>
-                    </section>
-                    <section name="blog">
-                        <deearcodes-blog limit="10" slug="{{postsData.slug}}" post-active="{{postsActive}}"></deearcodes-blog>
-                    </section>
-                    <section name="about">
-                        <deearcodes-about></deearcodes-about>   
-                    </section>
-                    <section name="login">
-                        <deearcodes-login></deearcodes-login>
-                    </section>
-                    <section name="admin">
-                        <deearcodes-admin></deearcodes-admin>
-                    </section>
-                </iron-pages>
-            </div>
-            <footer id="main_footer">
-                <p class="copyright">
-                    &copy; 2016 Daniel Reyes</p>
-                <div class="space"></div>
-                <nav>
-                    <a href="#">
-                        <iron-icon icon="custom-icons:facebook"></iron-icon>
-                    </a>
-                    <a href="#">
-                        <iron-icon icon="custom-icons:github"></iron-icon>
-                    </a>
-                    <a href="#">
-                        <iron-icon icon="custom-icons:twitter"></iron-icon>
-                    </a>
-                </nav>
-            </footer>
-        </paper-scroll-header-panel>
-        <!-- <paper-toast id="toast">
+    <app-location route="{{route}}" use-hash-as-path></app-location>
+    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{tail}}"></app-route>
+    <app-route route="{{route}}" pattern="/blog/:slug" active="{{postsActive}}" data="{{postsData}}"></app-route>
+    <firebase-app name="blog" api-key="AIzaSyBpUQyoTv2SdNNKbEy9xrp00F-LTIeC8eU" auth-domain="deearcodes.firebaseapp.com" database-url="https://deearcodes.firebaseio.com">
+    </firebase-app>
+    <app-header-layout fullbleed id="headerPanelMain">
+      
+      <main-navigation></main-navigation>
+      <div class="content">
+        <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible">
+          <section name="home">
+            <home-content></home-content>
+          </section>
+          <section name="blog">
+            <deearcodes-blog limit="10" slug="{{postsData.slug}}" post-active="{{postsActive}}"></deearcodes-blog>
+          </section>
+          <section name="about">
+            <deearcodes-about></deearcodes-about>
+          </section>
+          <section name="login">
+            <deearcodes-login></deearcodes-login>
+          </section>
+          <section name="admin">
+            <deearcodes-admin></deearcodes-admin>
+          </section>
+        </iron-pages>
+      </div>
+      <footer id="main_footer">
+        <p class="copyright">
+          &copy; 2016 Daniel Reyes</p>
+        <div class="space"></div>
+        <nav>
+          <a href="#">
+            <iron-icon icon="custom-icons:facebook"></iron-icon>
+          </a>
+          <a href="#">
+            <iron-icon icon="custom-icons:github"></iron-icon>
+          </a>
+          <a href="#">
+            <iron-icon icon="custom-icons:twitter"></iron-icon>
+          </a>
+        </nav>
+      </footer>
+    </app-header-layout>
+    <!-- <paper-toast id="toast">
             <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
         </paper-toast> -->
-        <!-- Uncomment next block to enable Service Worker support (1/2) -->
-        <paper-toast id="caching_complete" duration="6000" text="I work offline, try me :)">
-        </paper-toast>
-        <platinum-sw-register auto-register clients-claim skip-waiting base-uri="bower_components/platinum-sw/bootstrap" on-service-worker-installed="cachingComplete">
-            <platinum-sw-cache disable="false" default-cache-strategy="fastest" cache-config-file="cache-config.json">
-            </platinum-sw-cache>
-        </platinum-sw-register>
-    </template>
-    <script>
-    (function() {
-        'use strict';
-        class DeearcodesApp {
-            // Define behaviors with a getter.
+    <!-- Uncomment next block to enable Service Worker support (1/2) -->
+    <paper-toast id="caching_complete" duration="6000" text="I work offline, try me :)">
+    </paper-toast>
+    <platinum-sw-register auto-register clients-claim skip-waiting base-uri="bower_components/platinum-sw/bootstrap" on-service-worker-installed="cachingComplete">
+      <platinum-sw-cache disable="false" default-cache-strategy="fastest" cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+  </template>
+  <script>
+  (function() {
+    'use strict';
+    class DeearcodesApp {
+      // Define behaviors with a getter.
 
-            beforeRegister() {
-                this.is = 'deearcodes-app';
-                this.observers = [
-                    '_routePageChanged(routeData.page)'
-                ];
-                this.properties = {
-                    page: {
-                        type: String,
-                        reflectToAttribute: true,
-                        observer: '_pageChanged'
-                    }
-                };
-            }
-            created() {
-                /* window.performance && performance.mark && performance.mark('shop-app.created');*/
-                // Custom elements polyfill safe way to indicate an element has been upgraded.
-                this.removeAttribute('unresolved');
-            }
-            ready() {
-                // listen for online/offline
-                /*Polymer.RenderStatus.afterNextRender(this, function() {
-                    this.listen(window, 'online', '_notifyNetworkStatus');
-                    this.listen(window, 'offline', '_notifyNetworkStatus');
-                });*/
-            }
-            cachingComplete() {
-                this.$.caching_complete.show();
-            }
-            _routePageChanged(page) {
-                this.page = page || 'home';
-                // Scroll to the top of the page on every *route* change. Use `Polymer.AppLayout.scroll`
-                // with `behavior: 'silent'` to disable header scroll effects during the scroll.
-                this.$.headerPanelMain.scrollToTop(true);
-                // Close the drawer - in case the *route* change came from a link in the drawer.
-                /*this.drawerOpened = false;*/
-            }
-            _pageChanged(page, oldPage) {
-                if (page != null) {
-                    // home route is eagerly loaded
-                    if (page == 'home') {
-                        this._pageLoaded(Boolean(oldPage));
-                        // other routes are lazy loaded
-                    } else {
-                        this.importHref(
-                            this.resolveUrl(`../deearcodes-${page}/deearcodes-${page}.html`),
-                            function() {
-                                this._pageLoaded(Boolean(oldPage));
-                            }, null, true);
-                    }
-                }
-            }
-            _pageLoaded(shouldResetLayout) {
-                this._ensureLazyLoaded();
-                /* if (shouldResetLayout) {
-                     // The size of the header depends on the page (e.g. on some pages the tabs
-                     // do not appear), so reset the header's layout only when switching pages.
-                     this.async(function() {
-                         this.$.header.resetLayout();
-                     }, 1);
-                 }*/
-            }
-            _ensureLazyLoaded() {
-                // load lazy resources after render and set `loadComplete` when done.
-                if (!this.loadComplete) {
-                    Polymer.RenderStatus.afterNextRender(this, function() {
-                        this.importHref(this.resolveUrl('../lazy-resources.html'), function() {
-                            // Register service worker if supported.
-                            if ('serviceWorker' in navigator) {
-                                /*navigator.serviceWorker.register('/service-worker.js');*/
-                            }
-                            this._notifyNetworkStatus();
-                            this.loadComplete = true;
-                        });
-                    });
-                }
-            }
-            _notifyNetworkStatus() {
-                var oldOffline = this.offline;
-                this.offline = !navigator.onLine;
-                // Show the snackbar if the user is offline when starting a new session
-                // or if the network status changed.
-                if (this.offline || (!this.offline && oldOffline === true)) {
-                    if (!this._networkSnackbar) {
-                        this._networkSnackbar = document.createElement('shop-snackbar');
-                        Polymer.dom(this.root).appendChild(this._networkSnackbar);
-                    }
-                    Polymer.dom(this._networkSnackbar).innerHTML = this.offline ?
-                        'You are offline' : 'You are online';
-                    this._networkSnackbar.open();
-                }
-            }
-
+      beforeRegister() {
+        this.is = 'deearcodes-app';
+        this.observers = [
+          '_routePageChanged(routeData.page)'
+        ];
+        this.properties = {
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged'
+          }
+        };
+      }
+      created() {
+        this.removeAttribute('unresolved');
+      }
+      cachingComplete() {
+        this.$.caching_complete.show();
+      }
+      _routePageChanged(page) {
+        this.page = page || 'home';
+        this.$.headerPanelMain.scrollTop = 0;
+      }
+      _pageChanged(page, oldPage) {
+        if (page != null) {
+          // home route is eagerly loaded
+          if (page == 'home') {
+            this._pageLoaded(Boolean(oldPage));
+            // other routes are lazy loaded
+          } else {
+            this.importHref(
+              this.resolveUrl(`../deearcodes-${page}/deearcodes-${page}.html`),
+              function() {
+                this._pageLoaded(Boolean(oldPage));
+              }, null, true);
+          }
         }
-        Polymer(DeearcodesApp);
-    })();
-    </script>
+      }
+      _pageLoaded(shouldResetLayout) {
+        this._ensureLazyLoaded();
+      }
+      _ensureLazyLoaded() {
+        // load lazy resources after render and set `loadComplete` when done.
+        if (!this.loadComplete) {
+          Polymer.RenderStatus.afterNextRender(this, function() {
+            this.importHref(this.resolveUrl('../lazy-resources.html'), function() {
+              // Register service worker if supported.
+              if ('serviceWorker' in navigator) {
+                /*navigator.serviceWorker.register('/service-worker.js');*/
+              }
+              this._notifyNetworkStatus();
+              this.loadComplete = true;
+            });
+          });
+        }
+      }
+      _notifyNetworkStatus() {
+        var oldOffline = this.offline;
+        this.offline = !navigator.onLine;
+        // Show the snackbar if the user is offline when starting a new session
+        // or if the network status changed.
+        if (this.offline || (!this.offline && oldOffline === true)) {
+          if (!this._networkSnackbar) {
+            this._networkSnackbar = document.createElement('shop-snackbar');
+            Polymer.dom(this.root).appendChild(this._networkSnackbar);
+          }
+          Polymer.dom(this._networkSnackbar).innerHTML = this.offline ?
+            'You are offline' : 'You are online';
+          this._networkSnackbar.open();
+        }
+      }
+
+    }
+    Polymer(DeearcodesApp);
+  })();
+  </script>
 </dom-module>

@@ -17,48 +17,47 @@ Example:
 <link rel="import" href="../list-page/list-page.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 <dom-module id="deearcodes-blog">
-    <template>
-        <style>
-        :host {
-            display: block;
-        }
-        
-        a > paper-fab {
-            position: absolute;
-            top: 213px;
-            left: 32px;
-            z-index: 1;
-        }
-        </style>
-        <a href="/#/home">
-            <paper-fab icon="iron-custom-icons:arrow-back"></paper-fab>
-        </a>
-        <template is="dom-if" if="{{!postActive}}" restamp>
-            <list-page active category="{{category}}"></list-page>
-        </template>
-        <template is="dom-if" if="{{postActive}}" restamp>
-            <post-page active slug="{{slug}}"></post-page>
-        </template>
-    </template>
-    <script>
-    class DeearcodesBlog {
-        // Define behaviors with a getter.
-
-        beforeRegister() {
-            this.is = 'deearcodes-blog';
-            this.properties = {
-                postActive: {
-                    type: Boolean,
-                    notify: true
-                },
-                slug: {
-                    type: String,
-                    notify: true
-                }
-            };
-        }
+  <template>
+    <style>
+    :host {
+      display: block;
     }
+    
+    paper-fab {
+      position: absolute;
+      top: calc(240px - 30px);
+      left: 1em;
+    }
+    </style>
+    <a href="/#/home">
+      <paper-fab icon="iron-custom-icons:arrow-back"></paper-fab>
+    </a>
+    <template is="dom-if" if="{{!postActive}}" restamp>
+      <list-page active category="{{category}}"></list-page>
+    </template>
+    <template is="dom-if" if="{{postActive}}" restamp>
+      <post-page active slug="{{slug}}"></post-page>
+    </template>
+  </template>
+  <script>
+  class DeearcodesBlog {
+    // Define behaviors with a getter.
 
-    Polymer(DeearcodesBlog);
-    </script>
+    beforeRegister() {
+      this.is = 'deearcodes-blog';
+      this.properties = {
+        postActive: {
+          type: Boolean,
+          notify: true
+        },
+        slug: {
+          type: String,
+          notify: true
+        }
+      };
+    }
+  }
+
+  Polymer(DeearcodesBlog);
+  </script>
 </dom-module>

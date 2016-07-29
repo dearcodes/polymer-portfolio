@@ -16,54 +16,56 @@ Example:
 <link rel="import" href="../../styles/shared-styles.html">
 <link rel="import" href="../../bower_components/marked-element/marked-element.html">
 <link rel="import" href="../../bower_components/prism-element/prism-highlighter.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
 <link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
 <dom-module id="post-page">
-    <template>
-        <firebase-query app-name="blog" data="{{singleArticle}}" order-by-child="slug" equal-to="{{slug}}" id="singleArticle" path="/articles"></firebase-query>
-        <style include="shared-styles"></style>
-        <style>
-        :host {
-            display: block;
-        }
-        pre {
-            overflow: auto;
-        }
-        </style>
-        <template is="dom-repeat" items={{singleArticle}} as=article>
-            <h3>
+  <template>
+    <firebase-query app-name="blog" data="{{singleArticle}}" order-by-child="slug" equal-to="{{slug}}" id="singleArticle" path="/articles"></firebase-query>
+    <style include="shared-styles"></style>
+    <style>
+    :host {
+      display: block;
+    }
+    
+    pre {
+      overflow: auto;
+    }
+    </style>
+    <template is="dom-repeat" items={{singleArticle}} as=article>
+      <h3>
             {{article.title}}
           </h3>
-            <prism-highlighter></prism-highlighter>
-            <marked-element markdown="{{article.articleContent}}">
-                <div class="markdown-html"></div>
-            </marked-element>
-        </template>
+      <prism-highlighter></prism-highlighter>
+      <marked-element markdown="{{article.articleContent}}">
+        <div class="markdown-html"></div>
+      </marked-element>
     </template>
-    <script>
-    Polymer({
-        is: 'post-page',
-        properties: {
-            slug: {
-                type: String,
-                reflectToAttribute: true
-            },
-            active: {
-                type: Boolean,
-                value: false,
-                reflectToAttribute: true,
-                observer: 'pageActive'
-            },
-            singleArticle: {
-                type: Array
-            }
-        },
-        pageActive: function(active) {
-            if (active) {
-                let header = Polymer.dom(document).querySelector('deearcodes-app').$.headerPanelMain;
+  </template>
+  <script>
+  Polymer({
+    is: 'post-page',
+    properties: {
+      slug: {
+        type: String,
+        reflectToAttribute: true
+      },
+      active: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true,
+        observer: 'pageActive'
+      },
+      singleArticle: {
+        type: Array
+      }
+    },
+    pageActive: function(active) {
+      if (active) {
+        let header = Polymer.dom(document).querySelector('deearcodes-app').$.headerPanelMain;
 
-            }
-            return;
-        }
-    });
-    </script>
+      }
+      return;
+    }
+  });
+  </script>
 </dom-module>

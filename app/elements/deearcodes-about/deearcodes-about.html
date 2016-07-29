@@ -3,46 +3,163 @@
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <dom-module id="deearcodes-about">
   <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style is="custom-style" include="iron-flex iron-flex"></style>
+    <style include="shared-styles"></style>
     <style>
     :host {
-      display: flex;
-      height: 220vh;
+      display: block;
+      @apply(--layout-vertical);
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
     }
-    iframe{
-      width: 50%;
+    
+    p {
+      padding: 1em;
+      font-size: 1.1rem;
+      letter-spacing: -.003em;
+      line-height: 1.75;
+      margin: 0 auto;
+    }
+    
+    .iframe_container {
+      @apply(--layout-flex);
+      @apply(--layout-flex-1);
+    }
+    
+    paper-fab {
+      position: absolute;
+      top: calc(240px - 30px);
+      left: 1em;
+    }
+    
+    .meta {
+      @apply(--layout-vertical);
+      @apply(--layout-center);
+    }
+    
+    .meta > h2,
+    h1 {
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+    
+    iframe {
+      @apply(--layout-flex-1);
+      width: 100%;
       height: 100%;
       margin: 0 auto;
     }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+    :host(p) {
+      padding: 5em;
+    }
+    
+    #portrait {
+      top: -5rem;
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+    }
+    
+    .known_tech {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .known_tech > paper-button {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+    
     @media (max-width: 600px) {
-        iframe{
-          width: 100%;
-        }
-        }
-        /* Tablet+ */
+      iframe {
+        width: 100%;
+      }
+      p {
+        font-size: 1rem;
+      }
+      img #portrait {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    /* Tablet+ */
     </style>
-    <iframe frameborder="0" scrolling="no" src="https://embed.stackshare.io/stacks/embed/951a4d7cd6f00e"></iframe>
+    <a href="/#/home">
+      <paper-fab icon="iron-custom-icons:arrow-back"></paper-fab>
+    </a>
+    <div class="meta">
+      <h1>About me</h1>
+      <img id="portrait" src="../../images/deearcodes-portrait.jpg">
+    </div>
+    <article>
+      <p>
+        Ever since I was a kid creative thinking and inmense curiosity was part of my everyday life. I always remember the odd questions I made to my parents constantly, specially in roadtrips. Mom was patient and intructional, always answering to the best of her knowledge. Dad... well let's say after some 10 questions dad wanted to play the silence game... I'd say I was qualified as a "preguntón" which translates to "person that really asks... a lot", often times, in a despective way. But that didn't discourage me to question almost everything. Mid 90's my dad bought the first computer. Back in those days I mainly played minesweeper, but the hook was on. As a generation that has been exposed to the digital boom from early childhood, computers and how to use them to our advantage came natural to me. Back when I was 10 years old, I considered myself a PC Power User, althought I didn't know programming, tweaking the registry, optimizing and overclocking was a thrilling experience.
+      </p>
+      <p>
+        Coming into early adolescence It was clear to me computers where my thing. I encountered myself always beign the first resort of people that wanted their computers fixed or improved. I enjoyed building my own setups and more than anything, playing online. Runescape, Warcraft, DotA, Diablo... you name it. Long hours where invested in those games and those I'll never regret. The sense of community, working towards goals, and constant improvement where really important things I practiced everyday. High School came and at that point I was really certain Software Engineer was going to be my choice. Beign an autodidact I quickly noticed that althought the way I was learning fundamentals in software such as algorithms and development methodologies, operating systems and compilers, where great, the lack of dynamism and most of all the conundrum Universities face towards innovation and change due to the constant pressure for compliance with accreditations and of course standardarization of education, my learning rate was beign slowed. Formal education can't keep up with the fast paced rate of Technology. That was an insight I'm very thankful I noticed early on.
+        <p>
+          Thoughout my career I've been able to work in big products, with considerable impact in business, so I'm used to adhere to established code styles and project structures. 
+        </p>
+        <!-- <div hidden="">
+          Early on in my career I noticed the huge traction and enthusiasm in the Web community, and to this day I'm really confident the web will win.
+        </div> -->
+      </p>
+      <div class="known_tech">
+        <p>If you want to check out all the tools I'm familiarized with you can check them out here </p>
+        <div id="iframe_container"></div>
+        <img id="known_tech_img" src="../../images/knowntech.png" alt="List of known technologies and tools">
+        <paper-button raised on-tap="expandList">View All</paper-button>
+      </div>
+    </article>
   </template>
   <script>
   (function() {
     'use strict';
+    class DeearcodesAbout {
 
-    Polymer({
-      is: 'deearcodes-about',
 
-      properties: {
-        foo: {
-          type: String,
-          value: 'deearcodes-about',
-          notify: true
-        }
+      beforeRegister() {
+        this.is = 'deearcodes-about';
+        this.properties = {
+
+        };
       }
-    });
+
+      expandList() {
+        let techListIframeElement = document.createElement('iframe');
+        techListIframeElement.frameBorder = '0';
+        techListIframeElement.scrolling = 'no';
+        techListIframeElement.src = 'https://embed.stackshare.io/stacks/embed/951a4d7cd6f00e';
+        this.$.known_tech_img.style.display = 'none';
+        this.$.iframe_container.appendChild(techListIframeElement);
+        this.async(() => {
+          this.$.iframe_container.style.height = '250vh';
+        }, 1500);
+      }
+
+
+    }
+
+    Polymer(DeearcodesAbout);
+
   })();
   </script>
 </dom-module>
