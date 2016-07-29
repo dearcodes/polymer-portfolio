@@ -10,14 +10,14 @@
         
         .col-1 {
             @apply(--layout-flex-2);
-            max-width: 45%;
+            max-width: 66%;
             padding: 0 5% 0 2.5%;
         }
         
         .col-2,
         .col-3 {
-            @apply(--layout-flex-auto);
-            max-width: 27.5%;
+            @apply(--layout-flex);
+            max-width: 33%;
             padding: 0 2.5%;
         }
         
@@ -62,15 +62,13 @@
                 max-width: 100%;
                 padding: 0 2.5%;
             }
-            a{
-                margin-top: 1em;
-            }
         }
         </style>
         <div class="col-1 home_page_content">
             <h2>About me</h2>
             <hr>
             <p>
+            Hello, my name is Daniel Reyes and I'm a passionate Fullstack Software Developer. I enjoy building ambitious and complex web applications, leveraging the tools and performance the web platform has to offer and build usable and performant products. Developing an idea from scratch and collaborating with different teams to come to holistic solutions; learning and teaching through interaction, are the things I enjoy the most about Software.
             </p>
         </div>
         <div class="col-2 home_page_content">
@@ -104,7 +102,7 @@
 
         }
 
-        Polymer(HomeContent)
+        Polymer(HomeContent);
 
     })();
     </script>
