@@ -111,16 +111,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </div>
     <article>
       <p>
-        Ever since I was a kid creative thinking and inmense curiosity was part of my everyday life. I always remember the odd questions I made to my parents constantly, specially in roadtrips. Mom was patient and intructional, always answering to the best of her knowledge. Dad... well let's say after some 10 questions dad wanted to play the silence game... I'd say I was qualified as a "preguntón" which translates to "person that really asks... a lot", often times, in a despective way. But that didn't discourage me to question almost everything. Mid 90's my dad bought the first computer. Back in those days I mainly played minesweeper, but the hook was on. As a generation that has been exposed to the digital boom from early childhood, computers and how to use them to our advantage came natural to me. Back when I was 10 years old, I considered myself a PC Power User, althought I didn't know programming, tweaking the registry, optimizing and overclocking was a thrilling experience.
+        Ever since I was a kid creative thinking and immense curiosity has been part of my everyday life. I remember the odd questions I constantly asked my parents. Mom was patient and instructional, always tried to answer to the best of her knowledge. Dad... well, let's say after some 10 questions dad wanted to play the silence game. I'd say I qualified as a "preguntón", which translates to "person that asks... a lot", but that didn't discourage my pursuit for answers about everything.
       </p>
       <p>
-        Coming into early adolescence It was clear to me computers where my thing. I encountered myself always beign the first resort of people that wanted their computers fixed or improved. I enjoyed building my own setups and more than anything, playing online. Runescape, Warcraft, DotA, Diablo... you name it. Long hours where invested in those games and those I'll never regret. The sense of community, working towards goals, and constant improvement where really important things I practiced everyday. High School came and at that point I was really certain Software Engineer was going to be my choice. Beign an autodidact I quickly noticed that althought the way I was learning fundamentals in software such as algorithms and development methodologies, operating systems and compilers, where great, the lack of dynamism and most of all the conundrum Universities face towards innovation and change due to the constant pressure for compliance with accreditations and of course standardarization of education, my learning rate was beign slowed. Formal education can't keep up with the fast paced rate of Technology. That was an insight I'm very thankful I noticed early on.
-        <p>
-          Thoughout my career I've been able to work in big products, with considerable impact in business, so I'm used to adhere to established code styles and project structures. 
-        </p>
-        <!-- <div hidden="">
-          Early on in my career I noticed the huge traction and enthusiasm in the Web community, and to this day I'm really confident the web will win.
-        </div> -->
+        Mid 90's my dad bought the first computer. Back in those days I mainly played minesweeper, but the hook was on.
+      </p>
+      <quote>As a generation exposed from early childhood to the digital boom, computers and how to effectively use them to our advantage came natural.</quote>
+      <p>
+        Back when I was 10 years old I considered myself a PC Power User. Although I didn't know programming, tweaking the registry, optimizing and overclocking was a thrilling experience. Coming into early adolescence It was clear to me that computers where my thing. I encountered myself always being the first resort for people that wanted their computers fixed or improved. Building my own setups and more than anything, playing online. Runescape, Warcraft, DotA, Diablo... you name it. Long hours where invested in those games and those I'll never regret. To this day the sense of community, working toward goals and constant improvement are things I practice everyday.
+      </p>
+      <p>
+        As an autodidact I noticed that although the way I was learning fundamentals in software such as algorithms and development methodologies, operating systems and compilers, where great, the lack of dynamism and most of all the conundrum Universities face towards innovation and change due to the constant pressure for compliance with accreditations and of course standardarization of education, my learning rate was beign slowed. Formal education can't keep up with the fast paced rate of Technology. That was an insight I'm very thankful I noticed early on. Thoughout my career I've been able to work in big products, with considerable impact in business, so I'm used to adhere to established code styles and project structures.
       </p>
       <div class="known_tech">
         <p>If you want to check out all the tools I'm familiarized with you can check them out here </p>
@@ -146,11 +147,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       expandList() {
         let techListIframeElement = document.createElement('iframe');
         techListIframeElement.frameBorder = '0';
-        techListIframeElement.scrolling = 'no';
+        techListIframeElement.scrolling = 'auto';
         techListIframeElement.src = 'https://embed.stackshare.io/stacks/embed/951a4d7cd6f00e';
-        this.$.known_tech_img.style.display = 'none';
         this.$.iframe_container.appendChild(techListIframeElement);
         this.async(() => {
+          this.$.known_tech_img.style.display = 'none';
           this.$.iframe_container.style.height = '250vh';
         }, 1500);
       }

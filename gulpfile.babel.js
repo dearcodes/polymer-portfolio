@@ -212,7 +212,6 @@ gulp.task('cache-config', function(callback) {
   glob([
     'index.html',
     './',
-    'bower_components/paper-styles/typography.html',
     'bower_components/polymer/polymer.html',
     'bower_components/polymerfire/firebase-app.html',
     'bower_components/webcomponentsjs/webcomponents-lite.min.js',
